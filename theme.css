@@ -1,14 +1,189 @@
 /* ==========================================================================
+   Font Imports & @font-face Definitions
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap');
+
+/* Splash Custom Display Font */
+@font-face {
+    font-family: 'SplashFont';
+    src: url('assets/fonts/SplashFont.woff2') format('woff2'),
+         url('assets/fonts/SplashFont.woff') format('woff'),
+         url('assets/fonts/SplashFont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* ==========================================================================
+   Root Variables & Base Reset
+   ========================================================================== */
+:root {
+    --bg-dark: #0f0a1c;
+    --text-white: #ffffff;
+    --text-muted: #b3b0cb;
+    --accent-purple: #7000ff;
+    --accent-purple-hover: #8626ff;
+    --accent-callout-purple: #a855f7;
+    --nav-bg: rgba(15, 10, 28, 0.95);
+    --font-primary: 'Montserrat', sans-serif;
+    --font-display: 'SplashFont', 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   Typography Utilities
+   ========================================================================== */
+.font-splash {
+    font-family: var(--font-display);
+}
+
+h1, h2, h3, .brand-logo {
+    font-family: var(--font-primary);
+}
+
+/* ==========================================================================
+   Navbar Styles
+   ========================================================================== */
+.navbar {
+    width: 100%;
+    background-color: var(--nav-bg);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand-logo .logo-img {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-link, .dropbtn {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-primary);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    transition: color 0.2s;
+}
+
+.nav-link:hover, .dropbtn:hover {
+    color: var(--accent-callout-purple);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #17102b;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.4);
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 8px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: var(--text-white);
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    color: var(--accent-callout-purple);
+}
+
+.dropdown.active .dropdown-content {
+    display: block;
+}
+
+.btn-hiring {
+    background-color: var(--accent-purple);
+    color: var(--text-white);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 12px;
+    letter-spacing: 0.8px;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-hiring:hover {
+    background-color: var(--accent-purple-hover);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
    Games Page Split Layout (games.html)
    ========================================================================== */
 .game-hero-section {
     width: 100%;
-    min-height: calc(100vh - 160px);
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px 20px;
-    box-sizing: border-box;
+    padding: 60px 24px;
 }
 
 .game-hero-container {
@@ -100,7 +275,58 @@
     transform: translateY(-2px);
 }
 
-/* Responsive adjustments for Games page */
+/* ==========================================================================
+   Footer Styles
+   ========================================================================== */
+.footer-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto auto 0 auto;
+    padding: 40px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-brand .footer-logo {
+    height: 24px;
+    width: auto;
+    margin-bottom: 12px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.footer-links {
+    display: flex;
+    gap: 48px;
+}
+
+.link-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-col a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.link-col a:hover {
+    color: var(--text-white);
+}
+
+/* ==========================================================================
+   Responsive Rules
+   ========================================================================== */
 @media (max-width: 900px) {
     .game-hero-container {
         flex-direction: column;
@@ -113,6 +339,17 @@
     }
 
     .character-render {
-        max-height: 400px;
+        max-height: 380px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .footer-links {
+        gap: 24px;
     }
 }

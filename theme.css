@@ -8,7 +8,7 @@
     --accent-purple: #6e00ff;
     --accent-purple-hover: #5800cc;
     --accent-callout-purple: #8b3dff;
-    --tile-radius: 24px;
+    --tile-radius: 28px;
     --font-main: 'Montserrat', sans-serif;
 }
 
@@ -89,7 +89,7 @@ body {
     opacity: 0.7;
 }
 
-/* Dropdown */
+/* Header Dropdown (Click Toggle) */
 .dropdown {
     position: relative;
     display: inline-block;
@@ -116,31 +116,33 @@ body {
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%);
     background-color: #121212;
     min-width: 140px;
-    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
-    border-radius: 8px;
+    box-shadow: 0px 8px 24px rgba(0,0,0,0.6);
+    border-radius: 12px;
     padding: 8px 0;
     z-index: 102;
 }
 
 .dropdown-content a {
     color: var(--text-white);
-    padding: 10px 16px;
+    padding: 10px 20px;
     text-decoration: none;
     display: block;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.5px;
+    text-align: center;
 }
 
 .dropdown-content a:hover {
     background-color: #222222;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown.active .dropdown-content {
     display: block;
 }
 
@@ -165,7 +167,7 @@ body {
    ========================================================================== */
 .hero-container {
     flex: 1;
-    max-width: 1200px;
+    max-width: 1100px;
     width: 100%;
     margin: 40px auto;
     padding: 0 20px;
@@ -177,7 +179,7 @@ body {
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 240px);
+    grid-template-rows: repeat(2, 220px);
     gap: 20px;
     width: 100%;
 }
@@ -200,10 +202,10 @@ body {
 
 .tile h2 {
     color: var(--text-white);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 900;
-    line-height: 1.2;
-    letter-spacing: 0.5px;
+    line-height: 1.15;
+    letter-spacing: 1px;
 }
 
 .tile img {
@@ -212,21 +214,18 @@ body {
     object-fit: cover;
 }
 
+/* Tile Variations from Archived Screenshot */
 .tile-gradient-1, .tile-gradient-2, .tile-gradient-3, .tile-gradient-4 {
     background-image: url('assets/tiles/BrandedTile1.png');
     background-size: cover;
     background-position: center;
 }
 
-.tile-orange {
+.tile-text-card {
     background: linear-gradient(135deg, #ff4e00 0%, #ec008c 100%);
 }
 
-.tile-purple {
-    background: linear-gradient(135deg, #8a2be2 0%, #4a00e0 100%);
-}
-
-.tile-pink {
+.tile-pink-card {
     background: linear-gradient(135deg, #ff007f 0%, #7928ca 100%);
 }
 
@@ -235,310 +234,7 @@ body {
 }
 
 /* ==========================================================================
-   Games Page Split Layout (games.html)
-   ========================================================================== */
-.games-hero {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    min-height: calc(100vh - 160px);
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-    box-sizing: border-box;
-    width: 100%;
-}
-
-.games-hero .hero-left {
-    position: relative;
-    flex: 1;
-    width: 50%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.games-hero .character-render {
-    position: relative;
-    z-index: 2;
-    max-height: 520px;
-    width: auto;
-    object-fit: contain;
-}
-
-.games-hero .hero-right {
-    flex: 1;
-    width: 50%;
-    padding-left: 60px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.games-hero .main-title {
-    font-size: 52px;
-    font-weight: 900;
-    color: var(--text-white);
-    margin-bottom: 4px;
-}
-
-.games-hero .sub-title {
-    font-size: 28px;
-    font-weight: 800;
-    color: var(--text-white);
-    margin-bottom: 24px;
-}
-
-.games-hero .accent-callout {
-    color: var(--accent-callout-purple);
-    font-weight: 800;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.description-body p {
-    color: var(--text-white);
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 16px;
-    max-width: 540px;
-    font-weight: 500;
-}
-
-.description-body .lead-in {
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 8px;
-}
-
-.btn-play-purple {
-    display: inline-block;
-    background-color: var(--accent-purple);
-    color: var(--text-white);
-    text-decoration: none;
-    padding: 16px 36px;
-    border-radius: 12px;
-    font-weight: 800;
-    font-size: 14px;
-    letter-spacing: 1px;
-    width: fit-content;
-    margin-top: 16px;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-.btn-play-purple:hover {
-    background-color: var(--accent-purple-hover);
-    transform: translateY(-2px);
-}
-
-/* ==========================================================================
-   Stars Page Split Layout & Music Showcase (stars.html)
-   ========================================================================== */
-.stars-hero {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    min-height: calc(100vh - 160px);
-    width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-    box-sizing: border-box;
-}
-
-.stars-hero .hero-left {
-    position: relative;
-    flex: 1;
-    width: 50%;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ambient-gradient-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('assets/tiles/BrandedTile1.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: var(--tile-radius);
-    z-index: 1;
-}
-
-.character-render-sitting {
-    position: relative;
-    z-index: 2;
-    max-height: 520px;
-    width: auto;
-    object-fit: contain;
-}
-
-.stars-hero .hero-right {
-    flex: 1;
-    width: 50%;
-    padding-left: 60px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.stars-hero .main-title {
-    font-size: 56px;
-    font-weight: 900;
-    color: var(--text-white);
-    margin-bottom: 24px;
-}
-
-.stars-hero .bio-text {
-    color: var(--text-white);
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 28px;
-    max-width: 540px;
-    font-weight: 600;
-}
-
-.stars-hero .accent-callout-purple {
-    color: var(--accent-callout-purple);
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
-    margin-bottom: 32px;
-    max-width: 500px;
-    text-transform: uppercase;
-}
-
-.social-icons-row {
-    display: flex;
-    gap: 20px;
-}
-
-.social-icon {
-    color: var(--text-white);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    transition: opacity 0.2s;
-}
-
-.social-icon:hover {
-    opacity: 0.7;
-}
-
-.music-showcase {
-    max-width: 1000px;
-    margin: 80px auto 40px;
-    padding: 0 20px;
-}
-
-.music-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 60px;
-}
-
-.album-cover-box {
-    width: 420px;
-    height: 420px;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.album-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.tracklist-box {
-    display: flex;
-    flex-direction: column;
-}
-
-.tracks-heading {
-    font-size: 18px;
-    font-weight: 800;
-    margin-bottom: 12px;
-}
-
-.track-list {
-    margin-left: 20px;
-    margin-bottom: 32px;
-    color: var(--text-white);
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.6;
-}
-
-.streaming-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    width: 320px;
-}
-
-.btn-stream {
-    background-color: var(--accent-purple);
-    color: var(--text-white);
-    text-align: center;
-    padding: 14px 0;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 13px;
-    letter-spacing: 1px;
-    transition: background-color 0.2s, transform 0.2s;
-}
-
-.btn-stream:hover {
-    background-color: var(--accent-purple-hover);
-    transform: translateY(-2px);
-}
-
-.release-info {
-    text-align: center;
-    margin-top: 32px;
-}
-
-.release-info h2 {
-    font-size: 28px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
-
-.release-info p {
-    color: var(--text-muted);
-    font-size: 18px;
-    font-weight: 600;
-    margin-top: 4px;
-}
-
-.contact-banner {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.contact-banner h3 {
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--text-white);
-}
-
-/* ==========================================================================
-   Tools Page Specific Layout (tools.html)
+   Tools Page Layout & Absolute Dropdown Fix (tools.html)
    ========================================================================== */
 .tools-hero {
     display: flex;
@@ -597,6 +293,7 @@ body {
     margin-bottom: 28px;
 }
 
+/* Absolute Floating Download Dropdown */
 .download-dropdown-wrapper {
     position: relative;
     display: inline-block;
@@ -622,18 +319,17 @@ body {
 .download-menu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 8px);
     left: 0;
     width: 220px;
     background-color: #1a1a1a;
     border-radius: 12px;
-    margin-top: 8px;
     overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-    z-index: 10;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
+    z-index: 999;
 }
 
-.download-dropdown-wrapper:hover .download-menu {
+.download-dropdown-wrapper.active .download-menu {
     display: block;
 }
 
@@ -763,43 +459,23 @@ body {
         grid-template-rows: repeat(4, 200px);
     }
     
-    .stars-hero, .games-hero, .tools-hero {
+    .tools-hero {
         flex-direction: column;
         min-height: auto;
         padding: 40px 20px;
     }
 
-    .stars-hero .hero-left, .stars-hero .hero-right,
-    .games-hero .hero-left, .games-hero .hero-right,
     .tools-hero .hero-left, .tools-hero .hero-right {
         width: 100%;
         padding-left: 0;
     }
 
-    .stars-hero .hero-left, .games-hero .hero-left, .tools-hero .hero-left {
+    .tools-hero .hero-left {
         height: 400px;
         margin-bottom: 40px;
     }
 
     .secondary-tool-section {
         padding: 0 20px;
-    }
-}
-
-@media (max-width: 850px) {
-    .music-container {
-        flex-direction: column;
-    }
-
-    .album-cover-box {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1 / 1;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 32px;
     }
 }

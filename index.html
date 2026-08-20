@@ -19,8 +19,8 @@
             </a>
             <div class="nav-right">
                 <nav class="nav-menu">
-                    <div class="dropdown">
-                        <button class="dropbtn">DISCOVER <span class="arrow">▾</span></button>
+                    <div class="dropdown" id="discoverDropdown">
+                        <button class="dropbtn" onclick="toggleDropdown('discoverDropdown')">DISCOVER <span class="arrow">▾</span></button>
                         <div class="dropdown-content">
                             <a href="games.html">GAMES</a>
                             <a href="tools.html">TOOLS</a>
@@ -34,33 +34,34 @@
         </div>
     </header>
 
-    <!-- Bento Grid Hero Section -->
+    <!-- Bento Grid Landing Section (Original Layout Match) -->
     <main class="hero-container">
         <div class="bento-grid">
-            <a href="games.html" class="tile tile-gradient-1">
-                <h2>GAMES</h2>
+            <!-- Row 1 -->
+            <div class="tile tile-gradient-1"></div>
+            
+            <a href="games.html" class="tile tile-text-card">
+                <h2>POPCRAFT<br>GAMES</h2>
             </a>
-            <a href="tools.html" class="tile tile-gradient-2">
-                <h2>TOOLS</h2>
+            
+            <div class="tile tile-gradient-2"></div>
+            
+            <a href="tools.html" class="tile tile-text-card">
+                <h2>POPCRAFT<br>TOOLS</h2>
             </a>
-            <a href="stars.html" class="tile tile-gradient-3">
-                <h2>STARS</h2>
-            </a>
+
+            <!-- Row 2 -->
             <div class="tile tile-media">
-                <img src="assets/tiles/AlbumCover.png" alt="Featured Track">
+                <img src="assets/tiles/AlbumCover.png" alt="Featured Star">
             </div>
-            <div class="tile tile-gradient-4">
-                <img src="assets/tiles/BrandedTile1.png" alt="Ambient Graphic">
-            </div>
-            <a href="#about" class="tile tile-orange">
-                <h2>ABOUT</h2>
+
+            <div class="tile tile-gradient-3"></div>
+
+            <a href="stars.html" class="tile tile-pink-card">
+                <h2>POPCRAFT<br>STARS</h2>
             </a>
-            <a href="#" class="tile tile-purple">
-                <h2>CAREERS</h2>
-            </a>
-            <a href="#" class="tile tile-pink">
-                <h2>MERCH</h2>
-            </a>
+
+            <div class="tile tile-gradient-4"></div>
         </div>
     </main>
 
@@ -84,6 +85,26 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleDropdown(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('active');
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropbtn') && !event.target.matches('.btn-download-main')) {
+                const dropdowns = document.getElementsByClassName("dropdown");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].classList.remove('active');
+                }
+                const downloads = document.getElementsByClassName("download-dropdown-wrapper");
+                for (let i = 0; i < downloads.length; i++) {
+                    downloads[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>

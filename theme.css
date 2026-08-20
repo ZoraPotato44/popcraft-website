@@ -5,14 +5,19 @@
 
 @font-face {
     font-family: 'SplashFont';
-    src: url('assets/fonts/SplashFont.woff2') format('woff2'),
-         url('assets/fonts/SplashFont.woff') format('woff'),
-         url('assets/fonts/SplashFont.ttf') format('truetype');
-    font-weight: normal;
+    src: url('assets/fonts/SPLASH.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'SplashFont';
+    src: url('assets/fonts/SPLASH-REGULAR.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
 /* ==========================================================================
    Root Variables & Global Reset
    ========================================================================== */
@@ -178,46 +183,27 @@ body {
     box-shadow: 0 14px 32px rgba(0, 0, 0, 0.6);
 }
 
-/* Nav Link Tiles */
-.nav-tile {
+/* Image-Based Nav Tiles (Splash Games, Splash Tools, Splash Stars) */
+.img-tile {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
-    color: var(--text-white);
-    padding: 20px;
-    text-align: center;
+    background-color: transparent;
+    overflow: hidden;
 }
 
-.tile-brand {
-    font-size: 28px;
-    font-weight: 900;
-    line-height: 1;
-    letter-spacing: 0.5px;
+.tile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 32px;
 }
 
-.tile-title {
-    font-size: 22px;
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: 1px;
-}
-
-/* Title Tile Solid Color Gradients */
-.tile-orange {
-    background: #ff5500;
-}
-
-.tile-magenta {
-    background: #d000ff;
-}
-
-.tile-pink {
-    background: #ff0066;
-}
-
-/* Ambient Ambient Background Tiles */
+/* Ambient Background Tiles */
 .gradient-blue-orange {
     background: linear-gradient(135deg, #2a41a3 0%, #e65c00 100%);
 }
@@ -368,14 +354,6 @@ body {
 
     .tile {
         border-radius: 24px;
-    }
-
-    .tile-brand {
-        font-size: 22px;
-    }
-
-    .tile-title {
-        font-size: 18px;
     }
 
     .footer-container {

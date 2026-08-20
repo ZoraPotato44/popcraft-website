@@ -3,121 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POPCRAFT AI</title>
+    <title>POPCRAFT AI | Home</title>
     <link rel="stylesheet" href="theme.css">
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Navbar -->
     <header class="navbar">
         <div class="nav-container">
             <a href="index.html" class="brand-logo">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI" class="logo-img">
+                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI Logo" class="logo-img">
             </a>
             <div class="nav-right">
                 <nav class="nav-menu">
-                    <div class="dropdown" id="discoverDropdown">
-                        <button class="dropbtn" onclick="toggleDropdown('discoverDropdown')">DISCOVER <span class="arrow">▾</span></button>
+                    <div class="dropdown">
+                        <button class="dropbtn">
+                            Discover
+                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                         <div class="dropdown-content">
-                            <a href="games.html">GAMES</a>
-                            <a href="tools.html">TOOLS</a>
-                            <a href="stars.html">STARS</a>
+                            <a href="index.html">Home</a>
+                            <a href="games.html">Games</a>
+                            <a href="stars.html">Stars</a>
+                            <a href="tools.html">Tools</a>
                         </div>
                     </div>
-                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <a href="about.html" class="nav-link">About</a>
                 </nav>
                 <a href="jobs.html" class="btn-hiring">WE'RE HIRING</a>
             </div>
         </div>
     </header>
 
-    <!-- Main Section: 4x2 Tile Grid -->
-    <main class="grid-section">
-        <div class="tile-grid">
-            <!-- Row 1 -->
-            <div class="tile ambient-tile gradient-blue-orange"></div>
-            
-            <a href="games.html" class="tile img-tile">
-                <img src="assets/tiles/Splash Games.png" alt="Splash Games" class="tile-img">
-            </a>
-            
-            <div class="tile ambient-tile gradient-purple-pink"></div>
-            
-            <a href="tools.html" class="tile img-tile">
-                <img src="assets/tiles/Splash Tools.png" alt="Splash Tools" class="tile-img">
-            </a>
+    <!-- Hero Section -->
+    <main class="page-container">
+        <section class="hero-section">
+            <h1 class="hero-title font-splash">Transforming the<br>future of music.</h1>
+            <p class="hero-subtitle">Bringing the joy of AI-powered music creation and gaming to everyone.</p>
+        </section>
 
-            <!-- Row 2 -->
-            <div class="tile video-tile">
-                <img src="assets/tiles/Breathe Again - KaiFromSplash Video thumbnail.png" alt="Kai - Breathe Again" class="video-thumb">
-                <a href="https://www.youtube.com/watch?v=Dc33YLJPCiE" target="_blank" class="play-overlay" aria-label="Play Music Video">
-                    <div class="play-button">
-                        <span class="play-icon">▶</span>
-                    </div>
+        <!-- Discovery Tiles Grid -->
+        <section class="tiles-grid">
+            <div class="card-item">
+                <a href="games.html">
+                    <img src="assets/tiles/Popcraft_Games.png" alt="POPCRAFT Games" class="tile-img">
                 </a>
             </div>
-            
-            <div class="tile ambient-tile gradient-blue-purple"></div>
-            
-            <a href="stars.html" class="tile img-tile">
-                <img src="assets/tiles/Splash Stars.png" alt="Splash Stars" class="tile-img">
-            </a>
-            
-            <div class="tile ambient-tile gradient-blue-cyan"></div>
-        </div>
+
+            <div class="card-item">
+                <a href="stars.html">
+                    <img src="assets/tiles/Popcraft_Stars.png" alt="POPCRAFT Stars" class="tile-img">
+                </a>
+            </div>
+
+            <div class="card-item">
+                <a href="tools.html">
+                    <img src="assets/tiles/Popcraft_Tools.png" alt="POPCRAFT Tools" class="tile-img">
+                </a>
+            </div>
+        </section>
     </main>
 
-    <!-- Footer Area -->
+    <!-- Footer -->
     <footer class="footer-container">
         <div class="footer-brand">
-            <a href="index.html">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI" class="footer-logo">
-            </a>
-            <p>&copy; 2021 SPLASH. All Rights Reserved.</p>
+            <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI Logo" class="footer-logo">
+            <p>© 2026, POPCRAFT AI. All Rights Reserved.</p>
         </div>
-        
+
         <div class="footer-links-group">
             <div class="link-col">
                 <a href="#">Merch</a>
                 <a href="#">Newsroom</a>
             </div>
             <div class="link-col">
-				<a href="jobs.html">Careers</a>
-				<a href="#">Privacy Policy</a>
-				<a href="#">Terms of Use</a>
+                <a href="jobs.html">Careers</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
             </div>
         </div>
     </footer>
 
-    <!-- Social Links & Contact Banner -->
+    <!-- Contact Banner -->
     <div class="contact-banner">
-        <div class="social-icons">
-            <a href="#" aria-label="Twitter">Twitter</a>
-            <a href="#" aria-label="Instagram">Instagram</a>
-            <a href="#" aria-label="YouTube">YouTube</a>
-            <a href="https://discord.gg/Q4DSBs7HzJ" aria-label="Discord">Discord</a>
-            <a href="#" aria-label="TikTok">TikTok</a>
-            <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        </div>
-        <p class="contact-text">If you're interested in getting in touch, reach out via <a href="mailto:info@splashhq.com">info@splashhq.com</a></p>
-        <p class="address-text">60 Berwick St. Fortitude Valley, Brisbane, QLD, 4006, Australia</p>
+        <p class="contact-text">
+            If you're interested in getting in touch, reach out via 
+            <a href="mailto:info@splashmusic.com">info@splashmusic.com</a>
+        </p>
+        <p class="address-text">60 Baroona Rd, Paddington QLD 4064, Australia</p>
     </div>
-
-    <script>
-        function toggleDropdown(id) {
-            const el = document.getElementById(id);
-            el.classList.toggle('active');
-        }
-
-        window.onclick = function(event) {
-            if (!event.target.closest('.dropbtn')) {
-                const dropdowns = document.getElementsByClassName("dropdown");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].classList.remove('active');
-                }
-            }
-        }
-    </script>
 
 </body>
 </html>

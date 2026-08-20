@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>POPCRAFT AI</title>
     <link rel="stylesheet" href="theme.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -34,34 +31,42 @@
         </div>
     </header>
 
-    <!-- Bento Grid Landing Section (Original Layout Match) -->
-    <main class="hero-container">
-        <div class="bento-grid">
+    <!-- Main Section: 4x2 Tile Grid -->
+    <main class="grid-section">
+        <div class="tile-grid">
             <!-- Row 1 -->
-            <div class="tile tile-gradient-1"></div>
+            <div class="tile ambient-tile gradient-blue-orange"></div>
             
-            <a href="games.html" class="tile tile-text-card">
-                <h2>POPCRAFT<br>GAMES</h2>
+            <a href="games.html" class="tile nav-tile tile-orange">
+                <span class="tile-brand">SPLASH</span>
+                <span class="tile-title">GAMES</span>
             </a>
             
-            <div class="tile tile-gradient-2"></div>
+            <div class="tile ambient-tile gradient-purple-pink"></div>
             
-            <a href="tools.html" class="tile tile-text-card">
-                <h2>POPCRAFT<br>TOOLS</h2>
+            <a href="tools.html" class="tile nav-tile tile-magenta">
+                <span class="tile-brand">SPLASH</span>
+                <span class="tile-title">TOOLS</span>
             </a>
 
             <!-- Row 2 -->
-            <div class="tile tile-media">
-                <img src="assets/tiles/AlbumCover.png" alt="Featured Star">
+            <div class="tile video-tile">
+                <img src="assets/tiles/Kai_Breathe_Again.png" alt="Kai - Breathe Again" class="video-thumb">
+                <a href="https://www.youtube.com/watch?v=YOUR_VIDEO_ID" target="_blank" class="play-overlay" aria-label="Play Music Video">
+                    <div class="play-button">
+                        <span class="play-icon">▶</span>
+                    </div>
+                </a>
             </div>
-
-            <div class="tile tile-gradient-3"></div>
-
-            <a href="stars.html" class="tile tile-pink-card">
-                <h2>POPCRAFT<br>STARS</h2>
+            
+            <div class="tile ambient-tile gradient-blue-purple"></div>
+            
+            <a href="stars.html" class="tile nav-tile tile-pink">
+                <span class="tile-brand">SPLASH</span>
+                <span class="tile-title">STARS</span>
             </a>
-
-            <div class="tile tile-gradient-4"></div>
+            
+            <div class="tile ambient-tile gradient-blue-cyan"></div>
         </div>
     </main>
 
@@ -71,9 +76,10 @@
             <a href="index.html">
                 <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI" class="footer-logo">
             </a>
-            <p>&copy; 2026 POPCRAFT AI. All Rights Reserved.</p>
+            <p>&copy; 2021 SPLASH. All Rights Reserved.</p>
         </div>
-        <div class="footer-links">
+        
+        <div class="footer-links-group">
             <div class="link-col">
                 <a href="#">Merch</a>
                 <a href="#">Newsroom</a>
@@ -86,6 +92,20 @@
         </div>
     </footer>
 
+    <!-- Social Links & Contact Banner -->
+    <div class="contact-banner">
+        <div class="social-icons">
+            <a href="#" aria-label="Twitter">Twitter</a>
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="YouTube">YouTube</a>
+            <a href="#" aria-label="Discord">Discord</a>
+            <a href="#" aria-label="TikTok">TikTok</a>
+            <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+        <p class="contact-text">If you're interested in getting in touch, reach out via <a href="mailto:info@splashhq.com">info@splashhq.com</a></p>
+        <p class="address-text">60 Berwick St. Fortitude Valley, Brisbane, QLD, 4006, Australia</p>
+    </div>
+
     <script>
         function toggleDropdown(id) {
             const el = document.getElementById(id);
@@ -93,14 +113,10 @@
         }
 
         window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn') && !event.target.matches('.btn-download-main')) {
+            if (!event.target.closest('.dropbtn')) {
                 const dropdowns = document.getElementsByClassName("dropdown");
                 for (let i = 0; i < dropdowns.length; i++) {
                     dropdowns[i].classList.remove('active');
-                }
-                const downloads = document.getElementsByClassName("download-dropdown-wrapper");
-                for (let i = 0; i < downloads.length; i++) {
-                    downloads[i].classList.remove('active');
                 }
             }
         }

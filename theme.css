@@ -1,481 +1,118 @@
 /* ==========================================================================
-   Global Variables & Reset
+   Games Page Split Layout (games.html)
    ========================================================================== */
-:root {
-    --bg-dark: #070707;
-    --text-white: #ffffff;
-    --text-muted: #aaaaaa;
-    --accent-purple: #6e00ff;
-    --accent-purple-hover: #5800cc;
-    --accent-callout-purple: #8b3dff;
-    --tile-radius: 28px;
-    --font-main: 'Montserrat', sans-serif;
-}
-
-* {
+.game-hero-section {
+    width: 100%;
+    min-height: calc(100vh - 160px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
-body {
-    background-color: var(--bg-dark);
-    color: var(--text-white);
-    font-family: var(--font-main);
-    line-height: 1.5;
-    overflow-x: hidden;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* ==========================================================================
-   Header Navigation
-   ========================================================================== */
-.navbar {
+.game-hero-container {
+    max-width: 1200px;
     width: 100%;
-    height: 80px;
-    background-color: transparent;
-    position: relative;
-    z-index: 100;
-}
-
-.nav-container {
-    max-width: 1400px;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.brand-logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    position: relative;
-    z-index: 101;
-}
-
-.logo-img {
-    height: 28px;
-    width: auto;
-    object-fit: contain;
-}
-
-.nav-right {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-}
-
-.nav-link {
-    color: var(--text-white);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 1px;
-    transition: opacity 0.2s;
-}
-
-.nav-link:hover {
-    opacity: 0.7;
-}
-
-/* Header Dropdown (Click Toggle) */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background: none;
-    border: none;
-    color: var(--text-white);
-    font-family: var(--font-main);
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 1px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.arrow {
-    font-size: 10px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: calc(100% + 12px);
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #121212;
-    min-width: 140px;
-    box-shadow: 0px 8px 24px rgba(0,0,0,0.6);
-    border-radius: 12px;
-    padding: 8px 0;
-    z-index: 102;
-}
-
-.dropdown-content a {
-    color: var(--text-white);
-    padding: 10px 20px;
-    text-decoration: none;
-    display: block;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-align: center;
-}
-
-.dropdown-content a:hover {
-    background-color: #222222;
-}
-
-.dropdown.active .dropdown-content {
-    display: block;
-}
-
-.btn-hiring {
-    background-color: var(--accent-purple);
-    color: var(--text-white);
-    text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-weight: 800;
-    font-size: 12px;
-    letter-spacing: 0.5px;
-    transition: background-color 0.2s;
-}
-
-.btn-hiring:hover {
-    background-color: var(--accent-purple-hover);
-}
-
-/* ==========================================================================
-   Homepage Bento Grid Landing Area (index.html)
-   ========================================================================== */
-.hero-container {
-    flex: 1;
-    max-width: 1100px;
-    width: 100%;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 220px);
-    gap: 20px;
-    width: 100%;
-}
-
-.tile {
-    border-radius: var(--tile-radius);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    position: relative;
-    text-decoration: none;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.tile:hover {
-    transform: translateY(-4px);
-}
-
-.tile h2 {
-    color: var(--text-white);
-    font-size: 22px;
-    font-weight: 900;
-    line-height: 1.15;
-    letter-spacing: 1px;
-}
-
-.tile img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Tile Variations from Archived Screenshot */
-.tile-gradient-1, .tile-gradient-2, .tile-gradient-3, .tile-gradient-4 {
-    background-image: url('assets/tiles/BrandedTile1.png');
-    background-size: cover;
-    background-position: center;
-}
-
-.tile-text-card {
-    background: linear-gradient(135deg, #ff4e00 0%, #ec008c 100%);
-}
-
-.tile-pink-card {
-    background: linear-gradient(135deg, #ff007f 0%, #7928ca 100%);
-}
-
-.tile-media {
-    background-color: #181818;
-}
-
-/* ==========================================================================
-   Tools Page Layout & Absolute Dropdown Fix (tools.html)
-   ========================================================================== */
-.tools-hero {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    min-height: calc(100vh - 160px);
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px;
-    box-sizing: border-box;
-    width: 100%;
+    gap: 60px;
 }
 
-.tools-hero .hero-left {
-    position: relative;
+.game-media-col {
     flex: 1;
-    width: 50%;
-    height: 520px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.app-mockup-render {
-    position: relative;
-    z-index: 2;
-    max-width: 85%;
-    max-height: 460px;
-    width: auto;
+.character-render {
+    max-width: 100%;
+    max-height: 580px;
     height: auto;
     object-fit: contain;
-    filter: drop-shadow(0px 20px 40px rgba(0, 0, 0, 0.6));
+    filter: drop-shadow(0 12px 32px rgba(0,0,0,0.5));
 }
 
-.tools-hero .hero-right {
-    flex: 1;
-    width: 50%;
-    padding-left: 60px;
-    box-sizing: border-box;
-}
-
-.tools-hero .main-title {
-    font-size: 52px;
-    font-weight: 900;
-    line-height: 1.1;
-    margin-bottom: 20px;
-}
-
-.tools-hero .description-text {
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.6;
-    color: var(--text-white);
-    max-width: 520px;
-    margin-bottom: 28px;
-}
-
-/* Absolute Floating Download Dropdown */
-.download-dropdown-wrapper {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 36px;
-}
-
-.btn-download-main {
-    background-color: var(--accent-purple);
-    color: var(--text-white);
-    border: none;
-    padding: 14px 28px;
-    border-radius: 12px;
-    font-family: var(--font-main);
-    font-weight: 800;
-    font-size: 13px;
-    letter-spacing: 0.5px;
-    cursor: pointer;
+.game-info-col {
+    flex: 1.2;
     display: flex;
-    align-items: center;
-    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
-.download-menu {
-    display: none;
-    position: absolute;
-    top: calc(100% + 8px);
-    left: 0;
-    width: 220px;
-    background-color: #1a1a1a;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
-    z-index: 999;
-}
-
-.download-dropdown-wrapper.active .download-menu {
-    display: block;
-}
-
-.download-option {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 16px;
-    color: var(--text-white);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
-    transition: background-color 0.2s;
-}
-
-.download-option:hover {
-    background-color: #2a2a2a;
-}
-
-.platform-icon {
-    font-size: 14px;
-    width: 20px;
-    text-align: center;
-}
-
-.features-block .sub-heading {
-    font-size: 15px;
-    font-weight: 800;
-    margin-bottom: 12px;
-}
-
-.feature-list {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.feature-list li {
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.8;
-    color: var(--text-white);
-}
-
-.secondary-tool-section {
-    max-width: 1400px;
-    margin: 80px auto;
-    padding: 0 40px 0 50%;
-    box-sizing: border-box;
-}
-
-.secondary-tool-section .section-title {
+.game-title {
     font-size: 48px;
     font-weight: 900;
     line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.game-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 24px;
+}
+
+.callout-heading {
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: var(--accent-callout-purple);
+    margin-bottom: 16px;
+    text-transform: uppercase;
+}
+
+.game-description {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.6;
+    color: var(--text-white);
+    margin-bottom: 16px;
+    max-width: 560px;
+}
+
+.game-cta-text {
+    font-size: 16px;
+    font-weight: 800;
+    margin-top: 8px;
     margin-bottom: 20px;
 }
 
-.btn-try-now {
-    display: inline-block;
+.btn-play-now {
     background-color: var(--accent-purple);
     color: var(--text-white);
     text-decoration: none;
-    padding: 14px 32px;
+    padding: 14px 36px;
     border-radius: 12px;
     font-weight: 800;
     font-size: 13px;
-    letter-spacing: 0.5px;
-    margin-top: 12px;
+    letter-spacing: 1px;
+    transition: background-color 0.2s, transform 0.2s;
+    display: inline-block;
 }
 
-/* ==========================================================================
-   Footer Component
-   ========================================================================== */
-.footer-container {
-    width: 100%;
-    max-width: 1400px;
-    margin: 40px auto 0;
-    padding: 40px;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+.btn-play-now:hover {
+    background-color: var(--accent-purple-hover);
+    transform: translateY(-2px);
 }
 
-.footer-brand .footer-logo {
-    height: 22px;
-    width: auto;
-    margin-bottom: 12px;
-}
-
-.footer-brand p {
-    color: var(--text-muted);
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.footer-links {
-    display: flex;
-    gap: 60px;
-}
-
-.link-col {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.link-col a {
-    color: var(--text-muted);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    transition: color 0.2s;
-}
-
-.link-col a:hover {
-    color: var(--text-white);
-}
-
-/* ==========================================================================
-   Responsive Breakpoints
-   ========================================================================== */
-@media (max-width: 1024px) {
-    .bento-grid {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(4, 200px);
-    }
-    
-    .tools-hero {
+/* Responsive adjustments for Games page */
+@media (max-width: 900px) {
+    .game-hero-container {
         flex-direction: column;
-        min-height: auto;
-        padding: 40px 20px;
+        gap: 30px;
+        text-align: center;
     }
 
-    .tools-hero .hero-left, .tools-hero .hero-right {
-        width: 100%;
-        padding-left: 0;
+    .game-info-col {
+        align-items: center;
     }
 
-    .tools-hero .hero-left {
-        height: 400px;
-        margin-bottom: 40px;
-    }
-
-    .secondary-tool-section {
-        padding: 0 20px;
+    .character-render {
+        max-height: 400px;
     }
 }

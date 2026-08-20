@@ -19,8 +19,8 @@
             </a>
             <div class="nav-right">
                 <nav class="nav-menu">
-                    <div class="dropdown">
-                        <button class="dropbtn">DISCOVER <span class="arrow">▾</span></button>
+                    <div class="dropdown" id="discoverDropdown">
+                        <button class="dropbtn" onclick="toggleDropdown('discoverDropdown')">DISCOVER <span class="arrow">▾</span></button>
                         <div class="dropdown-content">
                             <a href="games.html">GAMES</a>
                             <a href="tools.html">TOOLS</a>
@@ -34,42 +34,39 @@
         </div>
     </header>
 
-    <!-- Games Split Hero Section -->
-    <main class="games-hero">
-        
-        <!-- Left Side: Character Render with Gradient Background -->
-        <div class="hero-left">
-            <div class="ambient-gradient-bg"></div>
-            <img src="assets/tiles/Kai-Roblox-p-800.png" alt="PopCraft Roblox Render" class="character-render">
-        </div>
-
-        <!-- Right Side: Descriptive Content -->
-        <div class="hero-right">
-            <h1 class="main-title">PopCraft on Roblox.</h1>
-            <h2 class="sub-title">Music &amp; Skate Game</h2>
-
-            <p class="accent-callout">DO YOU WANT TO BE A STAR?</p>
-
-            <div class="description-body">
-                <p>
-                    The world of PopCraft is a stage and <strong>YOU</strong> are the star. Perform for your friends and other players from around the world, and have your music skills rated. The higher you're rated, the more Fame Points you earn! Move up the ranks until you get to Legend!
-                </p>
-
-                <p>
-                    PopCraft Legends are regularly featured on our socials and have their music played in the game.
-                </p>
-
-                <p>
-                    PopCraft is a community of creative young people, connected by their love of gaming, music and music creation.
-                </p>
-
-                <p class="lead-in">Come join us!</p>
+    <!-- Main Game Section (Archived 2021 Split Layout) -->
+    <section class="game-hero-section">
+        <div class="game-hero-container">
+            <!-- Left Column: Character Render -->
+            <div class="game-media-col">
+                <img src="assets/tiles/Kai_Render.png" alt="Splash Character" class="character-render">
             </div>
 
-            <a href="#" class="btn-play-purple">PLAY NOW</a>
-        </div>
+            <!-- Right Column: Info & Action -->
+            <div class="game-info-col">
+                <h1 class="game-title">Splash on Roblox.</h1>
+                <p class="game-subtitle">Music & Skate Game</p>
 
-    </main>
+                <p class="callout-heading">DO YOU WANT TO BE A STAR?</p>
+
+                <p class="game-description">
+                    The world of Splash is a stage and YOU are the star. Perform for your friends and other players from around the world, and have your music skills rated. The higher you're rated, the more Fame Points you earn! Move up the ranks until you get to Legend!
+                </p>
+
+                <p class="game-description">
+                    Splash Legends are regularly featured on our socials and have their music played in the game.
+                </p>
+
+                <p class="game-description">
+                    Splash is a community of creative young people, connected by their love of gaming, music and music creation.
+                </p>
+
+                <p class="game-cta-text">Come join us!</p>
+
+                <a href="https://www.roblox.com/games/5683506509/SPLASH-Music-Skate" target="_blank" class="btn-play-now">PLAY NOW</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Area -->
     <footer class="footer-container">
@@ -91,6 +88,22 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleDropdown(id) {
+            const el = document.getElementById(id);
+            el.classList.toggle('active');
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.closest('.dropbtn')) {
+                const dropdowns = document.getElementsByClassName("dropdown");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
 
 </body>
 </html>

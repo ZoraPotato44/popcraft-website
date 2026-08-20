@@ -1,8 +1,15 @@
+/* ==========================================================================
+   Global Variables & Reset
+   ========================================================================== */
 :root {
-    --bg-black: #000000;
-    --tile-radius: 28px;
-    --purple-btn: #6e00ff;
-    --font-primary: 'Montserrat', sans-serif;
+    --bg-dark: #070707;
+    --text-white: #ffffff;
+    --text-muted: #aaaaaa;
+    --accent-purple: #6e00ff;
+    --accent-purple-hover: #5800cc;
+    --accent-callout-purple: #8b3dff;
+    --tile-radius: 24px;
+    --font-main: 'Montserrat', sans-serif;
 }
 
 * {
@@ -12,26 +19,32 @@
 }
 
 body {
-    background-color: var(--bg-black);
-    color: #ffffff;
-    font-family: var(--font-primary);
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    font-family: var(--font-main);
+    line-height: 1.5;
+    overflow-x: hidden;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-/* Header & Navigation Bar */
+/* ==========================================================================
+   Header Navigation
+   ========================================================================== */
 .navbar {
     width: 100%;
-    padding: 24px 60px;
+    height: 80px;
     background-color: transparent;
     position: relative;
     z-index: 100;
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
+    height: 100%;
     margin: 0 auto;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,13 +54,14 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
+    position: relative;
+    z-index: 101;
 }
 
-/* Strict image sizing prevents header blowouts */
 .logo-img {
-    height: 32px !important;
-    width: auto !important;
-    display: block;
+    height: 28px;
+    width: auto;
+    object-fit: contain;
 }
 
 .nav-right {
@@ -59,37 +73,44 @@ body {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 28px;
+    gap: 32px;
 }
 
 .nav-link {
-    color: #ffffff;
+    color: var(--text-white);
     text-decoration: none;
     font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 0.5px;
+    font-size: 13px;
+    letter-spacing: 1px;
     transition: opacity 0.2s;
 }
 
 .nav-link:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
-/* Dropdown Menu */
+/* Dropdown */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
 .dropbtn {
-    background: transparent;
-    color: #ffffff;
+    background: none;
     border: none;
-    font-family: var(--font-primary);
+    color: var(--text-white);
+    font-family: var(--font-main);
     font-weight: 700;
-    font-size: 14px;
+    font-size: 13px;
+    letter-spacing: 1px;
     cursor: pointer;
-    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.arrow {
+    font-size: 10px;
 }
 
 .dropdown-content {
@@ -97,23 +118,22 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    margin-top: 12px;
-    background-color: #111111;
-    min-width: 150px;
-    border-radius: 12px;
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.7);
-    overflow: hidden;
-    z-index: 200;
+    background-color: #121212;
+    min-width: 140px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.5);
+    border-radius: 8px;
+    padding: 8px 0;
+    z-index: 102;
 }
 
 .dropdown-content a {
-    color: #ffffff;
-    padding: 12px 18px;
+    color: var(--text-white);
+    padding: 10px 16px;
     text-decoration: none;
     display: block;
-    font-size: 13px;
-    font-weight: 600;
-    transition: background 0.2s;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .dropdown-content a:hover {
@@ -125,36 +145,41 @@ body {
 }
 
 .btn-hiring {
-    background-color: var(--purple-btn);
-    color: #ffffff;
-    padding: 10px 22px;
-    border-radius: 12px;
+    background-color: var(--accent-purple);
+    color: var(--text-white);
     text-decoration: none;
-    font-weight: 700;
-    font-size: 13px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 12px;
     letter-spacing: 0.5px;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: background-color 0.2s;
 }
 
 .btn-hiring:hover {
-    background-color: #5800cc;
-    transform: translateY(-1px);
+    background-color: var(--accent-purple-hover);
 }
 
-/* Bento Grid Hero Area */
+/* ==========================================================================
+   Homepage Bento Grid Landing Area (index.html)
+   ========================================================================== */
 .hero-container {
     flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px 80px;
 }
 
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(4, 250px);
-    grid-template-rows: repeat(2, 250px);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 240px);
     gap: 20px;
+    width: 100%;
 }
 
 .tile {
@@ -164,58 +189,178 @@ body {
     align-items: center;
     text-align: center;
     overflow: hidden;
-    transition: transform 0.25s ease;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .tile:hover {
-    transform: scale(1.03);
+    transform: translateY(-4px);
 }
 
 .tile h2 {
-    font-size: 24px;
+    color: var(--text-white);
+    font-size: 20px;
     font-weight: 900;
-    line-height: 1.15;
-    color: #ffffff;
-    text-transform: uppercase;
+    line-height: 1.2;
     letter-spacing: 0.5px;
 }
 
-/* Tile Custom Color Gradients */
-.tile-orange { background: linear-gradient(135deg, #ff5500, #ff2a00); }
-.tile-purple { background: linear-gradient(135deg, #a000ff, #d400ff); }
-.tile-pink { background: linear-gradient(135deg, #ff0055, #ff007f); }
-
-.tile-gradient-1 { background: linear-gradient(135deg, #4b0082, #ff4500); }
-.tile-gradient-2 { background: linear-gradient(135deg, #0011ff, #8a00ff); }
-.tile-gradient-3 { background: linear-gradient(135deg, #0033ff, #ff0055); }
-.tile-gradient-4 { background: linear-gradient(135deg, #1b0047, #ff6a00); }
-
-.tile-media {
-    background: #111111;
-}
-
-.tile-media img {
+.tile img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Split Games Hero Section */
-.games-hero {
-    display: flex;
-    min-height: calc(100vh - 180px);
-    width: 100%;
-    position: relative;
-    overflow: hidden;
+/* Tile Variations */
+.tile-gradient-1, .tile-gradient-2, .tile-gradient-3, .tile-gradient-4 {
+    background-image: url('assets/tiles/BrandedTile1.png');
+    background-size: cover;
+    background-position: center;
 }
 
-.hero-left {
-    flex: 1;
+.tile-orange {
+    background: linear-gradient(135deg, #ff4e00 0%, #ec008c 100%);
+}
+
+.tile-purple {
+    background: linear-gradient(135deg, #8a2be2 0%, #4a00e0 100%);
+}
+
+.tile-pink {
+    background: linear-gradient(135deg, #ff007f 0%, #7928ca 100%);
+}
+
+.tile-media {
+    background-color: #181818;
+}
+
+/* ==========================================================================
+   Games Page Split Layout (games.html)
+   ========================================================================== */
+.games-hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 160px);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.games-hero .hero-left {
     position: relative;
+    flex: 1;
+    width: 50%;
+    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
+}
+
+.games-hero .character-render {
+    position: relative;
+    z-index: 2;
+    max-height: 520px;
+    width: auto;
+    object-fit: contain;
+}
+
+.games-hero .hero-right {
+    flex: 1;
+    width: 50%;
+    padding-left: 60px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.games-hero .main-title {
+    font-size: 52px;
+    font-weight: 900;
+    color: var(--text-white);
+    margin-bottom: 4px;
+}
+
+.games-hero .sub-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-white);
+    margin-bottom: 24px;
+}
+
+.games-hero .accent-callout {
+    color: var(--accent-callout-purple);
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.description-body p {
+    color: var(--text-white);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+    max-width: 540px;
+    font-weight: 500;
+}
+
+.description-body .lead-in {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+.btn-play-purple {
+    display: inline-block;
+    background-color: var(--accent-purple);
+    color: var(--text-white);
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: fit-content;
+    margin-top: 16px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-play-purple:hover {
+    background-color: var(--accent-purple-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Stars Page Split Layout & Music Showcase (stars.html)
+   ========================================================================== */
+.stars-hero {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    min-height: calc(100vh - 160px);
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.stars-hero .hero-left {
+    position: relative;
+    flex: 1;
+    width: 50%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .ambient-gradient-bg {
@@ -224,151 +369,267 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 30% 40%, #a000ff 0%, #d400ff 30%, #ff0055 60%, transparent 80%);
-    opacity: 0.85;
-    filter: blur(40px);
+    background-image: url('assets/tiles/BrandedTile1.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--tile-radius);
     z-index: 1;
 }
 
-.character-render {
+.character-render-sitting {
     position: relative;
     z-index: 2;
-    max-height: 80vh;
-    max-width: 90%;
+    max-height: 520px;
+    width: auto;
     object-fit: contain;
 }
 
-.hero-right {
+.stars-hero .hero-right {
     flex: 1;
-    padding: 60px 80px 80px 40px;
+    width: 50%;
+    padding-left: 60px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #000000;
-    z-index: 3;
 }
 
-.main-title {
-    font-size: 48px;
+.stars-hero .main-title {
+    font-size: 56px;
     font-weight: 900;
-    color: #ffffff;
-    line-height: 1.1;
-    margin-bottom: 8px;
-    letter-spacing: -0.5px;
-}
-
-.sub-title {
-    font-size: 32px;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 32px;
-}
-
-.accent-callout {
-    color: #8a2be2;
-    font-weight: 800;
-    font-size: 16px;
-    letter-spacing: 1.5px;
+    color: var(--text-white);
     margin-bottom: 24px;
+}
+
+.stars-hero .bio-text {
+    color: var(--text-white);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 28px;
+    max-width: 540px;
+    font-weight: 600;
+}
+
+.stars-hero .accent-callout-purple {
+    color: var(--accent-callout-purple);
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin-bottom: 32px;
+    max-width: 500px;
     text-transform: uppercase;
 }
 
-.description-body p {
-    color: #ffffff;
-    font-size: 17px;
-    line-height: 1.55;
-    margin-bottom: 20px;
-    max-width: 540px;
-    font-weight: 500;
+.social-icons-row {
+    display: flex;
+    gap: 20px;
 }
 
-.description-body p strong {
+.social-icon {
+    color: var(--text-white);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.social-icon:hover {
+    opacity: 0.7;
+}
+
+/* Music Showcase Section */
+.music-showcase {
+    max-width: 1000px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
+}
+
+.music-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+.album-cover-box {
+    width: 420px;
+    height: 420px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.album-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tracklist-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.tracks-heading {
+    font-size: 18px;
     font-weight: 800;
+    margin-bottom: 12px;
 }
 
-.lead-in {
-    font-size: 20px !important;
-    font-weight: 700 !important;
-    margin-top: 28px !important;
+.track-list {
+    margin-left: 20px;
+    margin-bottom: 32px;
+    color: var(--text-white);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.6;
 }
 
-.btn-play-purple {
-    display: inline-block;
-    width: fit-content;
-    background-color: var(--purple-btn);
-    color: #ffffff;
-    padding: 14px 40px;
+.streaming-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 320px;
+}
+
+.btn-stream {
+    background-color: var(--accent-purple);
+    color: var(--text-white);
+    text-align: center;
+    padding: 14px 0;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 800;
-    font-size: 15px;
+    font-size: 13px;
     letter-spacing: 1px;
-    margin-top: 10px;
-    transition: transform 0.2s, background-color 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
-.btn-play-purple:hover {
-    background-color: #5800cc;
+.btn-stream:hover {
+    background-color: var(--accent-purple-hover);
     transform: translateY(-2px);
 }
 
-/* Footer Section */
-.footer-container {
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 40px 20px 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    border-top: 1px solid #1a1a1a;
+.release-info {
+    text-align: center;
+    margin-top: 32px;
 }
 
-.footer-logo {
-    height: 24px;
+.release-info h2 {
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.release-info p {
+    color: var(--text-muted);
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.contact-banner {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.contact-banner h3 {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--text-white);
+}
+
+/* ==========================================================================
+   Footer Component
+   ========================================================================== */
+.footer-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto 0;
+    padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-brand .footer-logo {
+    height: 22px;
     width: auto;
     margin-bottom: 12px;
 }
 
 .footer-brand p {
-    color: #666666;
-    font-size: 13px;
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 600;
 }
 
 .footer-links {
     display: flex;
-    gap: 40px;
+    gap: 60px;
 }
 
 .link-col {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
 }
 
 .link-col a {
-    color: #888888;
+    color: var(--text-muted);
     text-decoration: none;
     font-size: 13px;
+    font-weight: 600;
     transition: color 0.2s;
 }
 
 .link-col a:hover {
-    color: #ffffff;
+    color: var(--text-white);
 }
 
-/* Responsive Media Queries */
-@media (max-width: 960px) {
-    .games-hero {
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 1024px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 200px);
+    }
+    
+    .stars-hero, .games-hero {
+        flex-direction: column;
+        min-height: auto;
+        padding: 40px 20px;
+    }
+
+    .stars-hero .hero-left, .stars-hero .hero-right,
+    .games-hero .hero-left, .games-hero .hero-right {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    .stars-hero .hero-left, .games-hero .hero-left {
+        height: 400px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 850px) {
+    .music-container {
         flex-direction: column;
     }
-    .hero-right {
-        padding: 40px 24px;
+
+    .album-cover-box {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
     }
-    .main-title {
-        font-size: 36px;
-    }
-    .sub-title {
-        font-size: 24px;
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
     }
 }

@@ -538,6 +538,178 @@ body {
 }
 
 /* ==========================================================================
+   Tools Page Layout (tools.html)
+   ========================================================================== */
+.page-container.tools-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 24px 80px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.tool-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+    width: 100%;
+}
+
+.tool-preview {
+    flex: 0 0 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.tool-ui-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6);
+}
+
+.tool-content {
+    flex: 1;
+    max-width: 540px;
+}
+
+.tool-title {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.tool-description {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 28px;
+}
+
+.download-dropdown-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 36px;
+}
+
+.btn-download-main {
+    background-color: var(--accent-purple);
+    color: var(--text-white);
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 6px 20px rgba(112, 0, 255, 0.4);
+    transition: background-color 0.2s, transform 0.2s;
+    font-family: var(--font-primary);
+}
+
+.btn-download-main:hover {
+    background-color: var(--accent-purple-hover);
+    transform: translateY(-2px);
+}
+
+.download-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    width: 220px;
+    padding: 8px 0;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
+    z-index: 20;
+}
+
+.download-menu.show {
+    display: block;
+}
+
+.download-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: var(--text-white);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: background-color 0.2s;
+}
+
+.download-item:hover {
+    background-color: #2a2a2a;
+}
+
+.dl-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+}
+
+.feature-block {
+    margin-top: 10px;
+}
+
+.feature-heading {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--text-white);
+}
+
+.feature-list {
+    margin-top: 16px;
+    padding-left: 20px;
+}
+
+.feature-list li {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.gloss-section {
+    justify-content: flex-start;
+    padding-left: 0;
+}
+
+.btn-try-now {
+    display: inline-block;
+    background-color: var(--accent-purple);
+    color: var(--text-white);
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    box-shadow: 0 6px 20px rgba(112, 0, 255, 0.4);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-try-now:hover {
+    background-color: var(--accent-purple-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
    Footer & Contact Info
    ========================================================================== */
 .footer-container {
@@ -646,7 +818,8 @@ body {
 @media (max-width: 850px) {
     .showcase-wrapper,
     .kai-hero-wrapper,
-    .kai-music-wrapper {
+    .kai-music-wrapper,
+    .tool-section {
         flex-direction: column;
         align-items: center;
         text-align: center;
@@ -655,7 +828,8 @@ body {
 
     .character-col,
     .kai-hero-render,
-    .album-col {
+    .album-col,
+    .tool-preview {
         flex: initial;
         max-width: 320px;
     }
@@ -665,7 +839,8 @@ body {
         align-items: center;
     }
 
-    .page-title {
+    .page-title,
+    .tool-title {
         font-size: 36px;
     }
 
@@ -693,5 +868,10 @@ body {
 
     .media-callout {
         font-size: 16px;
+    }
+
+    .feature-list {
+        text-align: left;
+        display: inline-block;
     }
 }

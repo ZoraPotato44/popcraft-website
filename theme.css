@@ -18,6 +18,7 @@
     font-style: normal;
     font-display: swap;
 }
+
 /* ==========================================================================
    Root Variables & Global Reset
    ========================================================================== */
@@ -265,6 +266,112 @@ body {
 }
 
 /* ==========================================================================
+   Games Page Layout (games.html)
+   ========================================================================== */
+.page-container.games-page {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px 80px 24px;
+}
+
+.showcase-wrapper {
+    max-width: 1100px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+}
+
+/* Kai Character Column */
+.character-col {
+    flex: 0 0 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.kai-render-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Content Column */
+.content-col {
+    flex: 1;
+    max-width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.font-splash {
+    font-family: var(--font-display);
+}
+
+.page-title {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.page-subtitle {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 28px;
+}
+
+.star-callout {
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    color: #ff007f;
+    margin-bottom: 16px;
+}
+
+.description-text {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 18px;
+}
+
+.join-text {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 6px;
+    margin-bottom: 24px;
+}
+
+/* Play Now CTA Button */
+.btn-play-now {
+    background-color: var(--accent-purple);
+    color: var(--text-white);
+    text-decoration: none;
+    padding: 14px 36px;
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1.2px;
+    display: inline-block;
+    box-shadow: 0 6px 20px rgba(112, 0, 255, 0.4);
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-play-now:hover {
+    background-color: var(--accent-purple-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
    Footer & Contact Info
    ========================================================================== */
 .footer-container {
@@ -365,5 +472,31 @@ body {
 
     .footer-links-group {
         gap: 40px;
+    }
+}
+
+@media (max-width: 850px) {
+    .showcase-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .character-col {
+        flex: initial;
+        max-width: 300px;
+    }
+
+    .content-col {
+        align-items: center;
+    }
+
+    .page-title {
+        font-size: 36px;
+    }
+
+    .page-subtitle {
+        font-size: 18px;
     }
 }

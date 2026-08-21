@@ -1,177 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PopCraft AI</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { 
-            font-family: 'Inter', sans-serif; 
-            background-color: #000000; 
-            color: #ffffff; 
-            min-height: 100vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: space-between; 
-            background-image: radial-gradient(circle at 10% 20%, rgba(255, 69, 0, 0.3) 0%, rgba(138, 43, 226, 0.15) 30%, transparent 60%);
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-        
-        /* Header / Navbar */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 24px 48px; max-width: 1400px; width: 100%; margin: 0 auto; }
-        .logo-img { height: 32px; width: auto; display: block; }
-        
-        nav { display: flex; gap: 32px; align-items: center; }
-        
-        /* Dropdown Menu Styling & Animation */
-        .dropdown { position: relative; display: inline-block; }
-        .dropbtn { cursor: pointer; color: #a1a1a1; font-weight: 600; font-size: 15px; background: none; border: none; font-family: inherit; display: flex; align-items: center; gap: 4px; transition: color 0.2s; }
-        .dropdown:hover .dropbtn { color: #fff; }
-
-        .dropdown-content {
-            position: absolute;
-            top: 130%;
-            left: 50%;
-            transform: translateX(-50%) translateY(10px);
-            background-color: #ffffff;
-            min-width: 140px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
-            border-radius: 12px;
-            padding: 8px 0;
-            z-index: 100;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .dropdown:hover .dropdown-content {
-            opacity: 1;
-            visibility: visible;
-            transform: translateX(-50%) translateY(0);
-        }
-
-        .dropdown-content a {
-            color: #111111;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: block;
-            font-size: 13px;
-            font-weight: 700;
-            text-align: center;
-            letter-spacing: 0.5px;
-            transition: background-color 0.15s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f0f0f0;
-            color: #000000;
-        }
-
-        nav a { color: #a1a1a1; text-decoration: none; font-weight: 600; font-size: 15px; transition: color 0.2s; }
-        nav a:hover { color: #ffffff; }
-
-        .hiring-btn { background-color: #5500ff; color: #ffffff; padding: 10px 22px; border-radius: 50px; font-weight: 700; font-size: 13px; text-decoration: none; letter-spacing: 0.5px; transition: transform 0.2s; }
-        .hiring-btn:hover { transform: scale(1.05); }
-
-        /* Hero 4-Column Grid Section */
-        main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; max-width: 1250px; margin: 0 auto; width: 100%; }
-        .hero-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; width: 100%; }
-        
-        .grid-card { border-radius: 16px; overflow: hidden; position: relative; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; text-decoration: none; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.2s ease; background-color: #111; }
-        .grid-card:hover { transform: translateY(-4px); }
-        
-        .grid-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-        /* Footer */
-        footer { max-width: 1200px; width: 100%; margin: 0 auto; padding: 40px 20px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; color: #888; font-size: 13px; }
-        footer a { color: #888; text-decoration: none; display: block; margin-bottom: 8px; transition: color 0.2s; }
-        footer a:hover { color: #fff; }
-        .footer-logo { height: 24px; width: auto; margin-bottom: 12px; display: block; }
-        .footer-bottom-note { grid-column: span 3; text-align: center; margin-top: 20px; color: #555; font-size: 12px; }
-
-        @media (max-width: 1024px) { .hero-grid { grid-template-columns: repeat(2, 1fr); } footer { grid-template-columns: 1fr; } }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popcraft — Pop is yours to craft.</title>
+<meta name="description" content="Popcraft is the next chapter for Splash's creator tools: Games, Tools and Stars, kept alive and improving.">
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <a href="index.html" class="brand-logo">
-            <img src="assets/logo/Popcraft_Logotype.png" alt="PopCraft AI" class="logo-img">
-        </a>
-        <nav>
-            <div class="dropdown">
-                <button class="dropbtn">DISCOVER ▾</button>
-                <div class="dropdown-content">
-                    <a href="games.html">GAMES</a>
-                    <a href="tools.html">TOOLS</a>
-                    <a href="stars.html">STARS</a>
-                </div>
-            </div>
-            <a href="about.html">ABOUT</a>
-        </nav>
-        <a href="jobs.html" class="hiring-btn">WE'RE HIRING</a>
-    </header>
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/logo/Popcraft_Logotype.png" alt="Popcraft">
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="current">Home</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="stars.html">Stars</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="about.html#pledge" class="btn btn-ghost-ink">The Pledge</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
 
-    <!-- Main 4x2 Grid Layout -->
-    <main>
-        <div class="hero-grid">
-            <!-- Row 1 -->
-            <div class="grid-card">
-                <img src="assets/tiles/BrandedTile1.png" alt="Branded Tile 1">
-            </div>
-            <a href="games.html" class="grid-card">
-                <img src="assets/tiles/Popcraft Games.png" alt="Popcraft Games">
-            </a>
-            <div class="grid-card">
-                <img src="assets/tiles/BrandedTile2.png" alt="Branded Tile 2">
-            </div>
-            <a href="tools.html" class="grid-card">
-                <img src="assets/tiles/Popcraft Tools.png" alt="Popcraft Tools">
-            </a>
+<header class="hero">
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow on-ink">POPCRAFT AI · BUILT ON SPLASH</span>
+      <h1>Pop is yours <span class="accent">to craft.</span></h1>
+      <p class="lede">Popcraft picks up where Splash left off — the same AI music-making DNA, rebuilt from the ground up so the games, tools and creator programs you rely on never get discontinued on you again.</p>
+      <div class="cta-row">
+        <a href="tools.html" class="btn btn-primary">Start Crafting</a>
+        <a href="about.html" class="btn btn-ghost-ink">Read the pledge</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="frame">
+        <img src="assets/tiles/BrandedTile1.png" alt="">
+      </div>
+      <div class="badge">
+        <strong>0</strong>
+        <span>Products&nbsp;discontinued<br>since launch</span>
+      </div>
+    </div>
+  </div>
+</header>
 
-            <!-- Row 2 -->
-            <a href="games.html" class="grid-card">
-                <img src="assets/tiles/Temp Assets/Breathe Again - KaiFromSplash Video thumbnail.png" alt="Kai's Video Thumbnail">
-            </a>
-            <div class="grid-card">
-                <img src="assets/tiles/BrandedTile3.png" alt="Branded Tile 3">
-            </div>
-            <a href="stars.html" class="grid-card">
-                <img src="assets/tiles/Popcraft Stars.png" alt="Popcraft Stars">
-            </a>
-            <div class="grid-card">
-                <img src="assets/tiles/BrandedTile4.png" alt="Branded Tile 4">
-            </div>
-        </div>
-    </main>
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>NO PRODUCT LEFT BEHIND</span><span>◆</span>
+    <span>GAMES · TOOLS · STARS</span><span>◆</span>
+    <span>SHARPER AI, SAME SOUL</span><span>◆</span>
+    <span>CRAFTED WITH THE COMMUNITY</span><span>◆</span>
+    <span>NO PRODUCT LEFT BEHIND</span><span>◆</span>
+    <span>GAMES · TOOLS · STARS</span><span>◆</span>
+    <span>SHARPER AI, SAME SOUL</span><span>◆</span>
+    <span>CRAFTED WITH THE COMMUNITY</span><span>◆</span>
+  </div>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <div>
-            <img src="assets/logo/Popcraft_Logotype.png" alt="PopCraft Logo" class="footer-logo">
-            © 2026 PopCraft™. All Rights Reserved.<br><br>
-            If you’re interested in getting in touch, reach out via <a href="mailto:info@showtimecraft.org" style="display:inline; color:#aaa;">info@showtimecraft.org</a>
-        </div>
-        <div>
-            <a href="#">Merch</a>
-            <a href="#">Newsroom</a>
-        </div>
-        <div>
-            <a href="jobs.html">Careers</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-        </div>
-        <div class="footer-bottom-note">
-            This Website is hosted live on Cloudflare Pages via <code>popcraft.showtimecraft.org</code>
-        </div>
-    </footer>
+<section class="craft">
+  <div class="wrap">
+    <div class="craft-head">
+      <span class="eyebrow on-ink">THE CRAFT GRID</span>
+      <h2>Three products. One promise: they keep shipping.</h2>
+      <p>Every tile here is a living product with a maintenance roadmap, not a sunset date. Tap one to see what's currently in the workshop.</p>
+    </div>
 
-    <script src="logo.js" defer></script>
+    <div class="craft-grid">
+      <a class="tile tile-games" href="games.html">
+        <img class="tile-img" src="assets/tiles/Popcraft Games.png" alt="Popcraft Games">
+        <span class="tile-label"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Games — live on Roblox</span>
+      </a>
+
+      <a class="tile tile-tools" href="tools.html">
+        <img class="tile-img" src="assets/tiles/Popcraft Tools.png" alt="Popcraft Tools">
+        <span class="tile-label"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tools — AI music studio</span>
+      </a>
+
+      <a class="tile tile-b1 tile-plain" href="about.html">
+        <span class="tile-label">In the workshop</span>
+      </a>
+
+      <a class="tile tile-video tile-cover" href="stars.html" aria-label="Featured Stars track">
+        <img class="tile-img" src="assets/tiles/Temp Assets/Breathe Again - KaiFromSplash Video thumbnail.png" alt="">
+        <img class="play-icon" src="assets/tiles/play icon.png" alt="">
+      </a>
+
+      <a class="tile tile-stars" href="stars.html">
+        <img class="tile-img" src="assets/tiles/Popcraft Stars.png" alt="Popcraft Stars">
+        <span class="tile-label"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Stars — creator spotlight</span>
+      </a>
+
+      <a class="tile tile-b2" href="about.html">
+        <img class="tile-img" src="assets/tiles/BrandedTile4.png" alt="">
+        <span class="tile-label">Why Popcraft exists</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section on-paper">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow on-paper">WHY WE EXIST</span>
+      <h2>Splash proved the idea. Popcraft keeps the promise.</h2>
+      <p>21 million players found their sound in Splash. Popcraft is the team making sure that whatever they built doesn't quietly disappear the next time priorities shift.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z" stroke="#fff" stroke-width="1.8"/></svg></div>
+        <h3>No sunset clauses</h3>
+        <p>Every B2C product gets a public maintenance commitment the day it ships — patched, hosted and supported for as long as people are using it.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0116 0M4 12a8 8 0 0016 0M12 8v4l3 2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Sharper AI, same soul</h3>
+        <p>The generative models get faster and better behind the scenes. The tools, sounds and games you already know stay recognizably themselves.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M8 12a4 4 0 108 0 4 4 0 00-8 0zM3 20c1.5-3 4.5-4.5 9-4.5S19.5 17 21 20" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Built with the community</h3>
+        <p>Roadmaps are shaped by the Splash Stars and Popcraft creators actually using this stuff every day — not decided in a boardroom and dropped on you.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="promise">
+  <div class="wrap">
+    <div>
+      <span class="tag">The Pledge</span>
+      <h3>If you built with it, you can keep building with it.</h3>
+    </div>
+    <a href="about.html#pledge" class="btn btn-ghost-paper">Read the full pledge</a>
+  </div>
+</div>
+
+<section class="newsletter">
+  <div class="wrap">
+    <div>
+      <h2>Stay in the loop</h2>
+      <p>Release notes, roadmap updates and the occasional Stars spotlight — straight to your inbox, no fluff.</p>
+    </div>
+    <form action="#" method="post">
+      <input type="email" name="email" placeholder="you@email.com" required aria-label="Email address">
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo/Popcraft_Logotype.png" alt="Popcraft">
+        <p>Popcraft is an independent continuation of Splash's creator tools — built to keep every product supported, forever.</p>
+        <div class="social-row" style="margin-top:20px;">
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3c.4 2.3 2 3.9 4.3 4.2v2.6c-1.5 0-2.9-.5-4.1-1.3v6.4A5.5 5.5 0 1 1 9 9.5c.3 0 .6 0 .9.1v2.7a2.8 2.8 0 1 0 2 2.7V3h2.1z"/></svg></a>
+          <a href="#" aria-label="Discord"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M9 12.2c-.5 0-.9.5-.9 1s.4 1 .9 1 .9-.5.9-1-.4-1-.9-1zm6 0c-.5 0-.9.5-.9 1s.4 1 .9 1 .9-.5.9-1-.4-1-.9-1z"/><path d="M18.9 5.5A16 16 0 0015.4 4l-.3.6a12 12 0 016.4 5.7c-2-1-4.5-1.7-7.5-1.7s-5.5.7-7.5 1.7a12 12 0 016.4-5.7L12.6 4A16 16 0 009.1 5.5C6.3 9.7 5.5 13.8 5.8 17.8a16 16 0 004.8 2.4l.8-1.3a10 10 0 01-1.7-.8l.4-.3a11.5 11.5 0 009.8 0l.4.3a10 10 0 01-1.7.8l.8 1.3a16 16 0 004.8-2.4c.4-4.6-.8-8.7-3.1-12.3z"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 8.2s-.2-1.5-.8-2.1c-.8-.8-1.7-.8-2.1-.9C15.3 5 12 5 12 5s-3.3 0-6.1.2c-.4 0-1.3.1-2.1.9C3.2 6.7 3 8.2 3 8.2S2.8 10 2.8 11.7v.6c0 1.7.2 3.5.2 3.5s.2 1.5.8 2.1c.8.8 1.9.8 2.3.9 1.7.2 7.9.2 7.9.2s3.3 0 6.1-.2c.4 0 1.3-.1 2.1-.9.6-.6.8-2.1.8-2.1s.2-1.7.2-3.5v-.6c0-1.7-.2-3.5-.2-3.5zM10 14.6V9l5.2 2.8L10 14.6z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Discover</h4>
+          <a href="games.html">Games</a>
+          <a href="tools.html">Tools</a>
+          <a href="stars.html">Stars</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="about.html">About</a>
+          <a href="about.html#pledge">The Pledge</a>
+          <a href="#">Careers</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Popcraft. Built on the legacy of Splash / Popgun Labs.</span>
+      <span>info@showtimecraft.org</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

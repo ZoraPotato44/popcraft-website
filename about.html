@@ -1,102 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | POPCRAFT AI</title>
-    <link rel="stylesheet" href="theme.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Popcraft — Why we exist</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI Logo" class="logo-img">
-            </a>
-            <div class="nav-right">
-                <nav class="nav-menu">
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            Discover
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="games.html">GAMES</a>
-                            <a href="tools.html">TOOLS</a>
-                            <a href="stars.html">STARS</a>
-                        </div>
-                    </div>
-                    <a href="about.html" class="nav-link">About</a>
-                </nav>
-                <a href="jobs.html" class="btn-hiring">WE'RE HIRING</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main About Content -->
-    <main class="page-container tools-page">
-        <section class="tool-section">
-            
-            <!-- Left Side: Custom Gradient Placeholder (Replaces missing asset) -->
-            <div class="tool-preview">
-                <div class="about-hero-placeholder">
-                    <span class="placeholder-badge">POPCRAFT AI STUDIO</span>
-                    <h2 class="placeholder-title">NEXT-GEN MUSIC TECH</h2>
-                </div>
-            </div>
-
-            <!-- Right Side: Updated Copy -->
-            <div class="tool-content">
-                <h1 class="page-title font-splash">Bringing the joy<br>of music making<br>to everyone.</h1>
-                
-                <p class="description-text" style="font-weight: 700; margin-top: 24px;">
-                    POPCRAFT AI is the world's most advanced music technology company. We believe that making music should be simple, intuitive, fun and accessible to everyone.
-                </p>
-
-                <p class="description-text">
-                    We've made it our business to find new and inventive ways to inspire the next generation of musicians. This includes 'POPCRAFT AI', our popular game on Roblox, our suite of AI-powered composition and production tools for professional music creators, and creating our own original music, thanks to our first POPCRAFT AI Star, Kai.
-                </p>
-
-                <p class="star-callout" style="font-size: 14px; margin-top: 32px; letter-spacing: 1px;">
-                    OUR ULTIMATE GOAL IS TO HELP YOU TRANSFORM THE FUTURE OF MUSIC.
-                </p>
-            </div>
-
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer-container">
-        <div class="footer-brand">
-            <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI Logo" class="footer-logo">
-            <p>© 2026, POPCRAFT AI. All Rights Reserved.</p>
-        </div>
-
-        <div class="footer-links-group">
-            <div class="link-col">
-                <a href="#">Merch</a>
-                <a href="#">Newsroom</a>
-            </div>
-            <div class="link-col">
-                <a href="jobs.html">Careers</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Contact Banner -->
-    <div class="contact-banner">
-        <p class="contact-text">
-            If you're interested in getting in touch, reach out via 
-            <a href="mailto:info@showtimecraft.org">info@showtimecraft.org</a>
-        </p>
-        <p class="address-text">COMING SOON</p>
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/logo/Popcraft_Logotype.png" alt="Popcraft"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="stars.html">Stars</a></li>
+      <li><a href="about.html" class="current">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#pledge" class="btn btn-ghost-ink">The Pledge</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
+  </div>
+</nav>
 
-    <script src="logo.js" defer></script>
+<header class="hero" style="padding:96px 0 90px;">
+  <div class="glow glow-a"></div>
+  <div class="glow glow-b"></div>
+  <div class="wrap" style="position:relative;z-index:1;max-width:760px;">
+    <span class="eyebrow on-ink">ABOUT POPCRAFT</span>
+    <h1 style="font-size:clamp(36px,5.5vw,58px);margin-top:14px;">A concept for keeping good ideas alive.</h1>
+    <p class="lede" style="max-width:640px;">Popcraft started as a question: what if a music-AI company's B2C products didn't quietly get discontinued the moment focus shifted elsewhere? We think Splash proved the concept — Popcraft is the plan to keep proving it.</p>
+  </div>
+</header>
+
+<section class="section on-paper">
+  <div class="wrap" style="max-width:820px;">
+    <div class="section-head">
+      <span class="eyebrow on-paper">THE STORY SO FAR</span>
+      <h2>From Popgun, to Splash, to Popcraft.</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="year">2016 — Popgun Labs</span>
+        <h3>An AI-music startup with a big idea</h3>
+        <p>Popgun Labs set out to build AI that could genuinely understand and make music — not just imitate it.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2019 — Splash launches</span>
+        <h3>The idea meets a consumer audience</h3>
+        <p>Splash brought that research to everyday creators through games, a desktop production suite, and a growing roster of in-game Stars.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2020 — Splash on Roblox</span>
+        <h3>21 million players find their sound</h3>
+        <p>Splash's music-and-skate world became one of the largest AI-music experiences of its time.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">Today — Popcraft</span>
+        <h3>A commitment, not just a rebrand</h3>
+        <p>Popcraft carries Splash's product line forward under one explicit rule: every B2C product ships with a support commitment attached, so nothing gets discontinued out from under the people using it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section on-paper" style="padding-top:0;">
+  <div class="wrap">
+    <div class="crew-card">
+      <div class="art"><img src="assets/tiles/Temp Assets/Kai_Render.png" alt="Popcraft mascot placeholder"></div>
+      <div class="copy">
+        <span class="eyebrow on-ink">FACE OF POPCRAFT</span>
+        <h3>Meet your guide through the workshop.</h3>
+        <p>Every Splash generation had a character who showed people around — Popcraft's is still being cast. This card is wired up and ready for whoever that ends up being; swap in final art and copy whenever it's locked.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="promise" id="pledge" style="padding:100px 0;">
+  <div class="wrap" style="flex-direction:column;align-items:flex-start;max-width:760px;">
+    <span class="tag">THE POPCRAFT PLEDGE</span>
+    <h3 style="font-size:clamp(28px,4vw,42px);max-width:640px;">Three commitments, in plain language.</h3>
+    <div class="feature-grid" style="margin-top:40px;grid-template-columns:repeat(3,1fr);width:100%;">
+      <div class="feature-card">
+        <h3>1. Ship with a support plan</h3>
+        <p>No B2C product launches without a public commitment to how long it'll be maintained.</p>
+      </div>
+      <div class="feature-card">
+        <h3>2. Announce before we sunset</h3>
+        <p>If something ever has to be retired, creators hear about it early, with a real migration path — not a shutdown notice.</p>
+      </div>
+      <div class="feature-card">
+        <h3>3. Keep improving the AI, not just the AI</h3>
+        <p>Model upgrades roll out to existing products first. New features come after, not instead.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <div class="wrap">
+    <div>
+      <h2>Contact Popcraft</h2>
+      <p>Media, partnerships, or just want to talk shop — we read everything that comes in.</p>
+    </div>
+    <a href="mailto:hello@popcraft.ai" class="btn btn-primary">hello@popcraft.ai</a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo/Popcraft_Logotype.png" alt="Popcraft">
+        <p>Popcraft is an independent continuation of Splash's creator tools — built to keep every product supported, forever.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Discover</h4><a href="games.html">Games</a><a href="tools.html">Tools</a><a href="stars.html">Stars</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="about.html#pledge">The Pledge</a><a href="#">Careers</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Popcraft. Built on the legacy of Splash / Popgun Labs.</span><span>info@showtimecraft.org</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

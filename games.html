@@ -1,125 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POPCRAFT AI - Games</title>
-    <link rel="stylesheet" href="theme.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popcraft Games — Music &amp; Skate, kept alive</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI" class="logo-img">
-            </a>
-            <div class="nav-right">
-                <nav class="nav-menu">
-                    <div class="dropdown" id="discoverDropdown">
-                        <button class="dropbtn" onclick="toggleDropdown('discoverDropdown')">DISCOVER <span class="arrow">▾</span></button>
-                        <div class="dropdown-content">
-                            <a href="games.html">GAMES</a>
-                            <a href="tools.html">TOOLS</a>
-                            <a href="stars.html">STARS</a>
-                        </div>
-                    </div>
-                    <a href="about.html" class="nav-link">ABOUT</a>
-                </nav>
-                <a href="jobs.html" class="btn-hiring">WE'RE HIRING</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Section: Games Showcase -->
-    <main class="page-container games-page">
-        <div class="showcase-wrapper">
-            
-            <!-- Left Column: Kai Render -->
-            <div class="character-col">
-                <img src="assets/tiles/Temp Assets/Kai_Render.png" alt="Kai Splash Avatar" class="kai-render-img">
-            </div>
-
-            <!-- Right Column: Text & CTA -->
-            <div class="content-col">
-                <h1 class="page-title font-splash">Splash on Roblox.</h1>
-                <h2 class="page-subtitle">Music & Skate Game</h2>
-
-                <h3 class="star-callout">DO YOU WANT TO BE A STAR?</h3>
-
-                <p class="description-text">
-                    The world of Splash is a stage and YOU are the star. Perform for your friends and other players from around the world, and have your music skills rated. The higher you're rated, the more Fame Points you earn! Move up the ranks until you get to Legend!
-                </p>
-
-                <p class="description-text">
-                    Splash Legends are regularly featured on our socials and have their music played in the game.
-                </p>
-
-                <p class="description-text">
-                    Splash is a community of creative young people, connected by their love of gaming, music and music creation.
-                </p>
-
-                <p class="join-text">Come join us!</p>
-
-                <a href="https://www.roblox.com/games/5683500212/SPLASH-Music-Skate" target="_blank" class="btn-play-now">
-                    PLAY NOW
-                </a>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- Footer Area -->
-    <footer class="footer-container">
-        <div class="footer-brand">
-            <a href="index.html">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI" class="footer-logo">
-            </a>
-            <p>&copy; 2021 SPLASH. All Rights Reserved.</p>
-        </div>
-        
-        <div class="footer-links-group">
-            <div class="link-col">
-                <a href="#">Merch</a>
-                <a href="#">Newsroom</a>
-            </div>
-            <div class="link-col">
-				<a href="jobs.html">Careers</a>
-				<a href="#">Privacy Policy</a>
-				<a href="#">Terms of Use</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Social Links Banner -->
-    <div class="contact-banner">
-        <div class="social-icons">
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-            <a href="#">Discord</a>
-            <a href="#">TikTok</a>
-            <a href="#">LinkedIn</a>
-        </div>
-        <p class="contact-text">If you're interested in getting in touch, reach out via <a href="mailto:info@showtimecraft.org">info@showtimecraft.org</a></p>
-        <p class="address-text">COMING SOON</p>
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/logo/Popcraft_Logotype.png" alt="Popcraft"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="games.html" class="current">Games</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="stars.html">Stars</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#play" class="btn btn-ghost-ink">Play now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
+  </div>
+</nav>
 
-    <script src="logo.js" defer></script>
-    <script>
-        function toggleDropdown(id) {
-            const el = document.getElementById(id);
-            el.classList.toggle('active');
-        }
+<header class="product-hero">
+  <div class="glow glow-a" style="opacity:.35"></div>
+  <div class="wrap product-hero-grid">
+    <div class="frame">
+      <img src="assets/tiles/Temp Assets/Kai_Render.png" alt="Popcraft Games avatar render">
+    </div>
+    <div>
+      <span class="eyebrow on-ink">POPCRAFT GAMES · LIVE ON ROBLOX</span>
+      <h1>Do you want to <span style="background:var(--gradient-tile);-webkit-background-clip:text;background-clip:text;color:transparent;">be a star?</span></h1>
+      <p class="lede">Popcraft's flagship music &amp; skate world is the same stage Splash built — now with faster matchmaking, a rebuilt rating engine, and zero risk of getting pulled offline.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Perform your own tracks in a live virtual venue</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Earn Fame Points and climb toward Legend rank</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Get featured across Popcraft socials as a Star</li>
+      </ul>
+      <div class="cta-row">
+        <a href="#" id="play" class="btn btn-primary">Play on Roblox</a>
+        <a href="stars.html" class="btn btn-ghost-ink">Meet the Stars</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-        window.onclick = function(event) {
-            if (!event.target.closest('.dropbtn')) {
-                const dropdowns = document.getElementsByClassName("dropdown");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].classList.remove('active');
-                }
-            }
-        }
-    </script>
+<section class="section on-paper">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow on-paper">WHAT CHANGED</span>
+      <h2>Same stage. Sturdier foundations.</h2>
+      <p>Popcraft Games inherited Splash's community and its numbers — the rebuild is under the hood.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 12a8 8 0 0116 0M4 12a8 8 0 0016 0M12 8v4l3 2" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Faster matchmaking</h3>
+        <p>Rebuilt server routing gets you into a set in seconds, even during peak after-school hours.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 5-3.4 8.4-8 9-4.6-.6-8-4-8-9V7l8-4z" stroke="#fff" stroke-width="1.8"/></svg></div>
+        <h3>Fairer rating engine</h3>
+        <p>The scoring model that turns your set into Fame Points has been retrained on years of real play data.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M8 12a4 4 0 108 0 4 4 0 00-8 0zM3 20c1.5-3 4.5-4.5 9-4.5S19.5 17 21 20" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+        <h3>Safety, first</h3>
+        <p>Popcraft Games keeps Splash's moderation and parental-safety tooling active and continuously updated.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="craft" style="padding:90px 0;">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div>
+      <span class="eyebrow on-ink">FROM THE ARCHIVE</span>
+      <h2 style="font-size:clamp(26px,3.4vw,38px);margin-top:14px;">The world of Popcraft is a stage, and you're the star.</h2>
+      <p style="margin-top:16px;color:var(--muted-on-ink);line-height:1.7;">Perform for friends and players from around the world. The higher you're rated, the more Fame Points you earn — climb the ranks until you reach Legend.</p>
+      <a href="stars.html" class="btn btn-ghost-ink" style="margin-top:24px;">See current Legends</a>
+    </div>
+    <div class="tile tile-cover" style="aspect-ratio:4/3;">
+      <img class="tile-img" src="assets/tiles/BrandedTile2.png" alt="">
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo/Popcraft_Logotype.png" alt="Popcraft">
+        <p>Popcraft is an independent continuation of Splash's creator tools — built to keep every product supported, forever.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Discover</h4><a href="games.html">Games</a><a href="tools.html">Tools</a><a href="stars.html">Stars</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="about.html#pledge">The Pledge</a><a href="#">Careers</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Popcraft. Built on the legacy of Splash / Popgun Labs.</span><span>info@showtimecraft.org</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

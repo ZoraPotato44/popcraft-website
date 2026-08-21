@@ -1,155 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POPCRAFT AI - Stars</title>
-    <link rel="stylesheet" href="theme.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popcraft Stars — Creator spotlight</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI" class="logo-img">
-            </a>
-            <div class="nav-right">
-                <nav class="nav-menu">
-                    <div class="dropdown" id="discoverDropdown">
-                        <button class="dropbtn" onclick="toggleDropdown('discoverDropdown')">DISCOVER <span class="arrow">▾</span></button>
-                        <div class="dropdown-content">
-                            <a href="games.html">GAMES</a>
-                            <a href="tools.html">TOOLS</a>
-                            <a href="stars.html">STARS</a>
-                        </div>
-                    </div>
-                    <a href="about.html" class="nav-link">ABOUT</a>
-                </nav>
-                <a href="jobs.html" class="btn-hiring">WE'RE HIRING</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="page-container stars-page">
-        <!-- Hero Section: Meet Kai -->
-        <section class="kai-hero-wrapper">
-            <div class="kai-hero-render">
-                <img src="assets/tiles/Temp Assets/Kai-sit.png" alt="Kai Sitting" class="kai-sitting-img">
-            </div>
-            
-            <div class="kai-hero-content">
-                <h1 class="page-title font-splash">Meet Kai!</h1>
-                <p class="description-text">
-                    Kai is a 16 year old game designer living in NYC and is the creator of Splash. Kai's favourite pastimes include building new and fun ways to play with music in her Roblox game, hanging out with the Splash Legends and Celebrities and using her fashion skills to design amazing new merch for the Splash shop.
-                </p>
-                <p class="callout-text">
-                    IF YOU'RE LUCKY, YOU MIGHT SPOT KAI IN SPLASH! IF YOU DO, MAKE SURE YOU GET A SELFIE AND TAG #KAIFROMSPLASH ON YOUR SOCIALS!
-                </p>
-                <div class="kai-social-icons">
-                    <a href="https://tiktok.com/@kai_from_splash" target="_blank" aria-label="TikTok">
-                        <svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-1.42V8.9a6.34 6.34 0 0 0-5.38 2.35 6.34 6.34 0 0 0 1.25 8.86 6.34 6.34 0 0 0 8.78-1.25c.84-1.12 1.3-2.5 1.3-3.91V8.69a8.19 8.19 0 0 0 4.21 1.22V6.46a4.83 4.83 0 0 1-.05.23z"/></svg>
-                    </a>
-                    <a href="https://instagram.com/kaifromsplash" target="_blank" aria-label="Instagram">
-                        <svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
-                    <a href="https://youtube.com/c/KaiFromSplash" target="_blank" aria-label="YouTube">
-                        <svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Music Showcase Section -->
-        <section class="kai-music-wrapper">
-            <!-- Left: Album Art & Details -->
-            <div class="album-col">
-                <div class="album-art-card">
-                    <img src="assets/tiles/Temp Assets/AlbumCover.png" alt="BREATHE KaiFromSplash Album Cover" class="album-img">
-                </div>
-                <div class="album-info">
-                    <h2 class="album-title font-splash">BREATHE</h2>
-                    <p class="artist-name">KaiFromSplash</p>
-                </div>
-            </div>
-
-            <!-- Right: Tracklist & Streaming Grid -->
-            <div class="stream-col">
-                <div class="tracks-list">
-                    <h3 class="tracks-heading">Tracks</h3>
-                    <ol>
-                        <li>1. Breathe Again</li>
-                        <li>2. Summer</li>
-                        <li>3. So Sick</li>
-                    </ol>
-                </div>
-
-                <div class="platform-grid">
-                    <a href="https://open.spotify.com" target="_blank" class="btn-platform">SPOTIFY</a>
-                    <a href="https://music.apple.com" target="_blank" class="btn-platform">APPLE</a>
-                    <a href="https://youtube.com" target="_blank" class="btn-platform">YOUTUBE</a>
-                    <a href="https://amazon.com" target="_blank" class="btn-platform">AMAZON</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Partnership Callout -->
-        <div class="media-callout font-splash">
-            Contact Kai for Media and Partnership Opportunities
-        </div>
-    </main>
-
-    <!-- Footer Area -->
-    <footer class="footer-container">
-        <div class="footer-brand">
-            <a href="index.html">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI" class="footer-logo">
-            </a>
-            <p>&copy; 2021 SPLASH. All Rights Reserved.</p>
-        </div>
-        
-        <div class="footer-links-group">
-            <div class="link-col">
-                <a href="#">Merch</a>
-                <a href="#">Newsroom</a>
-            </div>
-            <div class="link-col">
-				<a href="jobs.html">Careers</a>
-				<a href="#">Privacy Policy</a>
-				<a href="#">Terms of Use</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Social Links Banner -->
-    <div class="contact-banner">
-        <div class="social-icons">
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-            <a href="#">Discord</a>
-            <a href="#">TikTok</a>
-            <a href="#">LinkedIn</a>
-        </div>
-		<p class="contact-text">If you're interested in getting in touch, reach out via <a href="mailto:info@showtimecraft.org">info@showtimecraft.org</a></p>
-		<p class="address-text">COMING SOON</p>
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/logo/Popcraft_Logotype.png" alt="Popcraft"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="stars.html" class="current">Stars</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#listen" class="btn btn-ghost-ink">Listen now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
+  </div>
+</nav>
 
-    <script src="logo.js" defer></script>
-    <script>
-        function toggleDropdown(id) {
-            const el = document.getElementById(id);
-            el.classList.toggle('active');
-        }
+<header class="product-hero">
+  <div class="glow glow-a" style="opacity:.3"></div>
+  <div class="wrap product-hero-grid">
+    <div class="frame">
+      <img src="assets/tiles/Temp Assets/Kai-sit.png" alt="Featured Popcraft Star">
+    </div>
+    <div>
+      <span class="eyebrow on-ink">POPCRAFT STARS · CREATOR SPOTLIGHT</span>
+      <h1>Every track has a <span style="background:var(--gradient-tile);-webkit-background-clip:text;background-clip:text;color:transparent;">Legend behind it.</span></h1>
+      <p class="lede">Stars is the program that turned Splash's top in-game performers into real, released artists. Popcraft keeps their catalogue live and keeps discovering the next one.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Legend-ranked players get studio time and release support</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Tracks distributed to Spotify, Apple Music and YouTube</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Every past release stays licensed and streaming, permanently</li>
+      </ul>
+      <div class="cta-row">
+        <a href="games.html" class="btn btn-primary">Chase Legend rank</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-        window.onclick = function(event) {
-            if (!event.target.closest('.dropbtn')) {
-                const dropdowns = document.getElementsByClassName("dropdown");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].classList.remove('active');
-                }
-            }
-        }
-    </script>
+<section class="section on-paper" id="listen">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow on-paper">FEATURED RELEASE</span>
+      <h2>Breathe Again</h2>
+      <p>The Star track that started it all — kept in rotation, kept in the catalogue.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:280px 1fr;gap:36px;align-items:center;background:#fff;border:1px solid rgba(20,22,43,.08);border-radius:var(--radius-lg);padding:32px;">
+      <img src="assets/tiles/Temp Assets/AlbumCover.png" alt="Breathe Again album cover" style="border-radius:var(--radius-md);">
+      <div>
+        <span class="stack-tag">Popcraft Stars · Legend</span>
+        <h3 style="font-family:'Montserrat';font-weight:700;font-size:24px;margin-top:10px;">Breathe Again</h3>
+        <p style="margin-top:8px;color:var(--muted-on-paper);">1. Breathe Again &nbsp;·&nbsp; 2. Summer &nbsp;·&nbsp; 3. So Sick</p>
+        <div class="cta-row" style="margin-top:20px;">
+          <a href="#" class="btn btn-primary">Spotify</a>
+          <a href="#" class="btn btn-ghost-paper">Apple Music</a>
+          <a href="#" class="btn btn-ghost-paper">YouTube</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="craft" style="padding:90px 0;">
+  <div class="wrap">
+    <div class="craft-head">
+      <span class="eyebrow on-ink">HOW LEGENDS ARE MADE</span>
+      <h2 style="font-size:clamp(26px,3.4vw,38px);">From first set to first release.</h2>
+    </div>
+    <div class="feature-grid" style="grid-template-columns:repeat(3,1fr);">
+      <div class="feature-card" style="background:var(--ink-2);border-color:rgba(255,255,255,.08);">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2l3 6 6 1-4.5 4.4L18 20l-6-3.2L6 20l1.5-6.6L3 9l6-1 3-6z" stroke="#fff" stroke-width="1.6"/></svg></div>
+        <h3 style="color:#fff;">Rise through the ranks</h3>
+        <p style="color:var(--muted-on-ink);">Perform in Popcraft Games and get rated by real players until you hit Legend.</p>
+      </div>
+      <div class="feature-card" style="background:var(--ink-2);border-color:rgba(255,255,255,.08);">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zM21 16a3 3 0 11-6 0 3 3 0 016 0z" stroke="#fff" stroke-width="1.6"/></svg></div>
+        <h3 style="color:#fff;">Produce with Tools</h3>
+        <p style="color:var(--muted-on-ink);">Take your idea into Popcraft Tools and finish a real, mixed track.</p>
+      </div>
+      <div class="feature-card" style="background:var(--ink-2);border-color:rgba(255,255,255,.08);">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20l4-4 3 3 4-6 5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 style="color:#fff;">Release as a Star</h3>
+        <p style="color:var(--muted-on-ink);">Popcraft distributes and promotes your release — and keeps it live for good.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo/Popcraft_Logotype.png" alt="Popcraft">
+        <p>Popcraft is an independent continuation of Splash's creator tools — built to keep every product supported, forever.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Discover</h4><a href="games.html">Games</a><a href="tools.html">Tools</a><a href="stars.html">Stars</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="about.html#pledge">The Pledge</a><a href="#">Careers</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Popcraft. Built on the legacy of Splash / Popgun Labs.</span><span>info@showtimecraft.org</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

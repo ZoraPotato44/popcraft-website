@@ -1,160 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POPCRAFT AI - Tools</title>
-    <link rel="stylesheet" href="theme.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Popcraft Tools — Make music like a pro</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI" class="logo-img">
-            </a>
-            <div class="nav-right">
-                <nav class="nav-menu">
-                    <div class="dropdown" id="discoverDropdown">
-                        <button class="dropbtn" onclick="toggleDropdown('discoverDropdown')">DISCOVER <span class="arrow">▾</span></button>
-                        <div class="dropdown-content">
-                            <a href="games.html">GAMES</a>
-                            <a href="tools.html">TOOLS</a>
-                            <a href="stars.html">STARS</a>
-                        </div>
-                    </div>
-                    <a href="about.html" class="nav-link">ABOUT</a>
-                </nav>
-                <a href="jobs.html" class="btn-hiring">WE'RE HIRING</a>
-            </div>
-        </div>
-    </header>
-
-    <main class="page-container tools-page">
-        
-        <!-- Section 1: Splash PRO -->
-        <section class="tool-section">
-            <div class="tool-preview">
-                <img src="assets/tiles/Temp Assets/Splash PRO-p-500.png" alt="Splash PRO Interface" class="tool-ui-img">
-            </div>
-            
-            <div class="tool-content">
-                <h1 class="tool-title font-splash">Make music like a Pro.</h1>
-                <p class="tool-description">
-                    Splash PRO uses sophisticated AI to help musicians create music. Explore various musical styles and controls, experiment with a number of AI-powered instruments and get inspired by a range of music genres.
-                </p>
-
-                <!-- Download Dropdown Component -->
-                <div class="download-dropdown-container">
-                    <button class="btn-download-main" onclick="toggleDownloadDropdown()">
-                        FREE DOWNLOAD <span class="arrow">▾</span>
-                    </button>
-                    <div class="download-menu" id="downloadMenu">
-                        <a href="#" class="download-item">
-                            <svg class="dl-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.85c.66-.8 1.11-1.92.99-3.04-.96.04-2.12.64-2.81 1.44-.61.71-1.15 1.85-1 2.96 1.07.08 2.16-.56 2.82-1.36z"/></svg>
-                            <span>MacOS</span>
-                        </a>
-                        <a href="#" class="download-item">
-                            <svg class="dl-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.95-9.617L24 0v11.4H10.95M0 12.6h9.75v9.451L0 20.701M10.95 12.6H24V24l-13.05-1.835"/></svg>
-                            <span>Windows</span>
-                        </a>
-                        <a href="#" class="download-item">
-                            <svg class="dl-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
-                            <span>Max for Live</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="feature-block">
-                    <h2 class="feature-heading font-splash">Simplify your music making process.</h2>
-                    <h2 class="feature-heading font-splash">Expand your musical horizons.</h2>
-                    
-                    <ul class="feature-list">
-                        <li>Create unique music compositions instantly</li>
-                        <li>Experiment with style and genre</li>
-                        <li>Iterate vocal lines through custom lyrics and our AI voices</li>
-                        <li>Design your drum kit to suit any playing style and genre</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 2: Gloss AI -->
-        <section class="tool-section gloss-section">
-            <div class="tool-content">
-                <h1 class="tool-title font-splash">Polish your audio.</h1>
-                <p class="tool-description">
-                    Gloss uses AI to master your audio, making it sound effortlessly polished — and it's super easy to use! If you're making music, preparing a podcast or creating videos, Gloss is the final step you need to make your audio sound awesome.
-                </p>
-                <a href="https://glossaudio.com" target="_blank" class="btn-try-now font-splash">TRY NOW</a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer Area -->
-    <footer class="footer-container">
-        <div class="footer-brand">
-            <a href="index.html">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI" class="footer-logo">
-            </a>
-            <p>&copy; 2026 POPCRAFT. All Rights Reserved.</p>
-        </div>
-        
-        <div class="footer-links-group">
-            <div class="link-col">
-                <a href="#">Merch</a>
-                <a href="#">Newsroom</a>
-            </div>
-            <div class="link-col">
-				<a href="jobs.html">Careers</a>
-				<a href="#">Privacy Policy</a>
-				<a href="#">Terms of Use</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Social Links Banner -->
-    <div class="contact-banner">
-        <div class="social-icons">
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-            <a href="#">Discord</a>
-            <a href="#">TikTok</a>
-            <a href="#">LinkedIn</a>
-        </div>
-		<p class="contact-text">If you're interested in getting in touch, reach out via <a href="mailto:info@showtimecraft.org">info@showtimecraft.org</a></p>
-		<p class="address-text">COMING SOON</p>
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="brand"><img src="assets/logo/Popcraft_Logotype.png" alt="Popcraft"></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="games.html">Games</a></li>
+      <li><a href="tools.html" class="current">Tools</a></li>
+      <li><a href="stars.html">Stars</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="#download" class="btn btn-ghost-ink">Download</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
+  </div>
+</nav>
 
-    <script src="logo.js" defer></script>
-    <script>
-        function toggleDropdown(id) {
-            const el = document.getElementById(id);
-            el.classList.toggle('active');
-        }
+<header class="product-hero">
+  <div class="glow glow-b" style="opacity:.3"></div>
+  <div class="wrap product-hero-grid">
+    <div class="frame">
+      <img src="assets/tiles/Temp Assets/Splash PRO-p-500.png" alt="Popcraft Tools interface render">
+    </div>
+    <div>
+      <span class="eyebrow on-ink">POPCRAFT TOOLS · AI MUSIC STUDIO</span>
+      <h1>Make music <span style="background:var(--gradient-tile);-webkit-background-clip:text;background-clip:text;color:transparent;">like a pro.</span></h1>
+      <p class="lede">Popcraft Tools carries forward Splash PRO's AI-assisted workflow — sketch a genre, sculpt a beat, and get vocals that actually sit in the mix, all from a desktop app that's still getting monthly updates.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Generate original compositions in seconds</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Write custom lyrics and shape AI vocal takes</li>
+        <li><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L19 7" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Design drum kits tuned to your genre</li>
+      </ul>
+      <div class="cta-row" id="download">
+        <a href="#" class="btn btn-primary">Download for macOS</a>
+        <a href="#" class="btn btn-ghost-ink">Download for Windows</a>
+      </div>
+    </div>
+  </div>
+</header>
 
-        function toggleDownloadDropdown() {
-            const menu = document.getElementById('downloadMenu');
-            menu.classList.toggle('show');
-        }
+<section class="section on-paper">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow on-paper">SIMPLIFY THE PROCESS</span>
+      <h2>Expand your musical horizons.</h2>
+      <p>Popcraft Tools is built for the moment inspiration hits and the moment you need to finish a track fast.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zM21 16a3 3 0 11-6 0 3 3 0 016 0z" stroke="#fff" stroke-width="1.6"/></svg></div>
+        <h3>Style-aware generation</h3>
+        <p>Explore genres and controls with a model retrained on a broader, more current catalogue than Splash PRO ever had.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2a4 4 0 014 4v5a4 4 0 01-8 0V6a4 4 0 014-4zM6 11a6 6 0 0012 0M12 17v4" stroke="#fff" stroke-width="1.6"/></svg></div>
+        <h3>Vocal ideas, instantly</h3>
+        <p>Draft lyrics, hear them sung back, iterate. No studio booking required.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20l4-4 3 3 4-6 5 5" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Runs where you already work</h3>
+        <p>Standalone on macOS and Windows, or as a Max for Live plugin inside your existing Ableton session.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        window.onclick = function(event) {
-            if (!event.target.closest('.dropbtn')) {
-                const dropdowns = document.getElementsByClassName("dropdown");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].classList.remove('active');
-                }
-            }
-            if (!event.target.closest('.download-dropdown-container')) {
-                const menu = document.getElementById('downloadMenu');
-                if (menu && menu.classList.contains('show')) {
-                    menu.classList.remove('show');
-                }
-            }
-        }
-    </script>
+<section class="craft" style="padding:90px 0;">
+  <div class="wrap" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+    <div class="tile tile-plain" style="aspect-ratio:4/3;order:2;">
+      <span class="tile-label" style="font-size:14px;">Max for Live · macOS · Windows</span>
+    </div>
+    <div>
+      <span class="eyebrow on-ink">POLISH THE RESULT</span>
+      <h2 style="font-size:clamp(26px,3.4vw,38px);margin-top:14px;">Pair Tools with Gloss-style mastering.</h2>
+      <p style="margin-top:16px;color:var(--muted-on-ink);line-height:1.7;">Splash's Gloss mastering engine lives on inside Popcraft Tools' export step — one click to make a rough idea sound like a finished record.</p>
+      <a href="about.html" class="btn btn-ghost-ink" style="margin-top:24px;">Read the engineering notes</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/logo/Popcraft_Logotype.png" alt="Popcraft">
+        <p>Popcraft is an independent continuation of Splash's creator tools — built to keep every product supported, forever.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col"><h4>Discover</h4><a href="games.html">Games</a><a href="tools.html">Tools</a><a href="stars.html">Stars</a></div>
+        <div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="about.html#pledge">The Pledge</a><a href="#">Careers</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="#">Privacy Policy</a><a href="#">Terms of Use</a></div>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Popcraft. Built on the legacy of Splash / Popgun Labs.</span><span>info@showtimecraft.org</span></div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
 </body>
 </html>

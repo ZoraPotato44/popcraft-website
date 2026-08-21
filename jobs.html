@@ -3,98 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers | POPCRAFT AI</title>
-    <link rel="stylesheet" href="theme.css">
+    <title>Careers - PopCraft AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #000000; 
+            color: #ffffff; 
+            min-height: 100vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between; 
+            background-image: radial-gradient(circle at 90% 10%, rgba(138, 43, 226, 0.2) 0%, transparent 50%);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        header { display: flex; justify-content: space-between; align-items: center; padding: 24px 48px; max-width: 1400px; width: 100%; margin: 0 auto; }
+        .logo-text { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; color: #ffffff; text-decoration: none; }
+        nav { display: flex; gap: 32px; align-items: center; }
+        nav a { color: #a1a1a1; text-decoration: none; font-weight: 600; font-size: 15px; transition: color 0.2s; }
+        nav a:hover { color: #ffffff; }
+        
+        main { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; text-align: center; max-width: 700px; margin: 0 auto; }
+        h1 { font-size: 42px; font-weight: 800; margin-bottom: 16px; letter-spacing: -1px; }
+        p { color: #a1a1a1; font-size: 16px; line-height: 1.6; margin-bottom: 32px; }
+        .back-btn { background-color: #222; color: #fff; padding: 12px 28px; border-radius: 50px; font-weight: 600; text-decoration: none; border: 1px solid rgba(255,255,255,0.1); transition: background 0.2s; }
+        .back-btn:hover { background-color: #333; }
+
+        footer { max-width: 1200px; width: 100%; margin: 0 auto; padding: 30px 20px; text-align: center; color: #555; font-size: 12px; border-top: 1px solid rgba(255,255,255,0.05); }
+    </style>
 </head>
 <body>
-
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI Logo" class="logo-img">
-            </a>
-            <div class="nav-right">
-                <nav class="nav-menu">
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            Discover
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="index.html">Home</a>
-                            <a href="games.html">Games</a>
-                            <a href="stars.html">Stars</a>
-                            <a href="tools.html">Tools</a>
-                        </div>
-                    </div>
-                    <a href="about.html" class="nav-link">About</a>
-                </nav>
-                <a href="jobs.html" class="btn-hiring">WE'RE HIRING</a>
-            </div>
-        </div>
+    <header>
+        <a href="index.html" class="logo-text">POPCRAFT AI</a>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
     </header>
 
-    <!-- Main Jobs Content -->
-    <main class="page-container tools-page">
-        <section class="tool-section">
-            
-            <div class="tool-preview">
-                <div class="about-hero-placeholder">
-                    <span class="placeholder-badge">JOIN THE TEAM</span>
-                    <h2 class="placeholder-title">BUILD THE FUTURE</h2>
-                </div>
-            </div>
-
-            <div class="tool-content">
-                <h1 class="page-title font-splash">Work with<br>POPCRAFT AI.</h1>
-                
-                <p class="description-text" style="font-weight: 700; margin-top: 24px;">
-                    We are building tools and gaming experiences that push the boundaries of AI music creation and interactive play.
-                </p>
-
-                <p class="description-text">
-                    We're looking for passionate developers, designers, and creators to help build the next generation of digital tools and music platforms.
-                </p>
-
-                <p class="star-callout" style="font-size: 14px; margin-top: 32px; letter-spacing: 1px;">
-                    PUBLIC RECRUITMENT AND STAFF APPLICATIONS ARE CURRENTLY OPEN.
-                </p>
-            </div>
-
-        </section>
+    <main>
+        <h1>No Open Positions</h1>
+        <p>We are currently not in official development for AI initiatives or actively expanding public staff applications. Check back later as our roadmap evolves!</p>
+        <a href="index.html" class="back-btn">Return Home</a>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer-container">
-        <div class="footer-brand">
-            <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI Logo" class="footer-logo">
-            <p>© 2026, POPCRAFT AI. All Rights Reserved.</p>
-        </div>
-
-        <div class="footer-links-group">
-            <div class="link-col">
-                <a href="#">Merch</a>
-                <a href="#">Newsroom</a>
-            </div>
-            <div class="link-col">
-                <a href="jobs.html">Careers</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
-            </div>
-        </div>
+    <footer>
+        © 2026 PopCraft. All Rights Reserved.
     </footer>
-
-    <!-- Contact Banner -->
-    <div class="contact-banner">
-        <p class="contact-text">
-            If you're interested in getting in touch, reach out via 
-            <a href="mailto:info@splashmusic.com">info@splashmusic.com</a>
-        </p>
-        <p class="address-text">60 Baroona Rd, Paddington QLD 4064, Australia</p>
-    </div>
-
 </body>
 </html>

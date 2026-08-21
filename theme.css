@@ -1,6 +1,63 @@
 /* ==========================================================================
    Base & Typography Settings
    ========================================================================== */
+@font-face {
+    font-family: "Montserrat";
+    src: url("assets/fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("assets/fonts/Montserrat-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("assets/fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url("assets/fonts/Montserrat-Black.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Splash";
+    src: url("assets/fonts/SPLASH-REGULAR.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Splash";
+    src: url("assets/fonts/SPLASH.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --bg-dark: #000000;
     --text-light: #ffffff;
@@ -8,6 +65,7 @@
     --accent-cyan: #00d2ff;
     --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     --font-display: "Montserrat", sans-serif;
+    --font-splash: "Splash", "Montserrat", sans-serif;
 }
 
 * {
@@ -22,6 +80,11 @@ body {
     font-family: var(--font-main);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+}
+
+.font-splash {
+    font-family: var(--font-splash);
+    font-weight: 700;
 }
 
 /* ==========================================================================

@@ -1,9 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const logoImg = document.querySelector(".brand-logo img");
+    const logos = document.querySelectorAll("img.logo-img, img.footer-logo");
 
-    if (logoImg) {
-        logoImg.addEventListener("error", () => {
-            console.warn("Logo failed to load from primary path.");
-        });
-    }
+    logos.forEach((img) => {
+        img.addEventListener("error", () => {
+            const fallback = document.createElement("span");
+            fallback.textContent = "POPCRAFT AI";
+            fallback.className = "logo-fallback-text";
+            fallback.style.fontWeight = "800";
+            fallback.style.letterSpacing = "0.5px";
+            fallback.style.color = "#ffffff";
+            fallback.style.fontFamily = "inherit";
+            fallback.style.fontSize = img.classList.contains("footer-logo") ? "18px" : "22px";
+            img.replaceWith(fallback);
+        }, { once: true });
+    });
 });

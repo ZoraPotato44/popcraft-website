@@ -24,14 +24,14 @@
         .hiring-btn { background-color: #5500ff; color: #ffffff; padding: 10px 22px; border-radius: 50px; font-weight: 700; font-size: 13px; text-decoration: none; letter-spacing: 0.5px; transition: transform 0.2s; }
         .hiring-btn:hover { transform: scale(1.05); }
 
-        /* Hero 3x3 Grid Section */
+        /* Hero Grid Section - Exact 3 columns by 2 rows match */
         main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; max-width: 1100px; margin: 0 auto; width: 100%; }
         .hero-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; }
         
         .grid-card { border-radius: 16px; overflow: hidden; position: relative; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; text-decoration: none; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.2s ease; background-color: #111; }
         .grid-card:hover { transform: translateY(-4px); }
         
-        .grid-card img { width: 100%; height: 100%; object-type: cover; display: block; }
+        .grid-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
         /* Footer */
         footer { max-width: 1200px; width: 100%; margin: 0 auto; padding: 40px 20px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; color: #888; font-size: 13px; }
@@ -56,41 +56,37 @@
         <a href="#" class="hiring-btn" target="_blank">WE'RE HIRING</a>
     </header>
 
-    <!-- Main 3x3 Grid Layout using local asset tiles -->
+    <!-- Main Grid Layout matching the 6-card Splash reference -->
     <main>
         <div class="hero-grid">
-            <!-- Row 1 -->
+            <!-- Row 1, Col 1: Non-clickable decorative tile -->
             <div class="grid-card">
                 <img src="assets/tiles/BrandedTile1.png" alt="Branded Tile 1">
             </div>
+
+            <!-- Row 1, Col 2: Games -->
             <a href="games.html" class="grid-card">
                 <img src="assets/tiles/Popcraft Games.png" alt="Popcraft Games">
             </a>
-            <div class="grid-card">
-                <img src="assets/tiles/BrandedTile2.png" alt="Branded Tile 2">
-            </div>
 
-            <!-- Row 2 -->
+            <!-- Row 1, Col 3: Tools -->
             <a href="tools.html" class="grid-card">
                 <img src="assets/tiles/Popcraft Tools.png" alt="Popcraft Tools">
             </a>
+
+            <!-- Row 2, Col 1: Play / Video Showcase -->
             <a href="games.html" class="grid-card">
                 <img src="assets/tiles/play icon.png" alt="Play Showcase">
             </a>
-            <div class="grid-card">
-                <img src="assets/tiles/BrandedTile3.png" alt="Branded Tile 3">
-            </div>
 
-            <!-- Row 3 -->
-            <div class="grid-card">
-                <img src="assets/tiles/BrandedTile4.png" alt="Branded Tile 4">
-            </div>
+            <!-- Row 2, Col 2: Stars -->
             <a href="stars.html" class="grid-card">
                 <img src="assets/tiles/Popcraft Stars.png" alt="Popcraft Stars">
             </a>
-            <!-- Extra filler or matching logo asset for bottom right -->
+
+            <!-- Row 2, Col 3: Non-clickable decorative tile -->
             <div class="grid-card">
-                <img src="assets/tiles/BrandedTile1.png" alt="Branded Tile">
+                <img src="assets/tiles/BrandedTile2.png" alt="Branded Tile 2">
             </div>
         </div>
     </main>

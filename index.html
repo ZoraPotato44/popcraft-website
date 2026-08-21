@@ -3,96 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>POPCRAFT AI | Home</title>
-    <link rel="stylesheet" href="theme.css">
+    <title>PopCraft AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: #000000; color: #ffffff; min-height: 100vh; display: flex; flex-direction: column; justify-content: space-between; }
+        
+        /* Header / Navbar */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 24px 48px; max-width: 1400px; width: 100%; margin: 0 auto; }
+        .logo-text { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; color: #ffffff; text-decoration: none; }
+        
+        nav { display: flex; gap: 32px; align-items: center; }
+        .dropdown { position: relative; display: inline-block; cursor: pointer; color: #a1a1a1; font-weight: 600; font-size: 15px; }
+        .dropdown:hover { color: #fff; }
+        nav a { color: #a1a1a1; text-decoration: none; font-weight: 600; font-size: 15px; transition: color 0.2s; }
+        nav a:hover { color: #ffffff; }
+
+        .hiring-btn { background-color: #5500ff; color: #ffffff; padding: 10px 22px; border-radius: 50px; font-weight: 700; font-size: 13px; text-decoration: none; letter-spacing: 0.5px; transition: transform 0.2s; }
+        .hiring-btn:hover { transform: scale(1.05); }
+
+        /* Hero 3x3 Grid Section */
+        main { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px; max-width: 1100px; margin: 0 auto; width: 100%; }
+        .hero-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; }
+        
+        .grid-card { border-radius: 16px; overflow: hidden; position: relative; aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; text-decoration: none; border: 1px solid rgba(255,255,255,0.06); transition: transform 0.2s ease; background-color: #111; }
+        .grid-card:hover { transform: translateY(-4px); }
+        
+        .grid-card img { width: 100%; height: 100%; object-type: cover; display: block; }
+
+        /* Footer */
+        footer { max-width: 1200px; width: 100%; margin: 0 auto; padding: 40px 20px; border-top: 1px solid rgba(255, 255, 255, 0.08); display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 20px; color: #888; font-size: 13px; }
+        footer a { color: #888; text-decoration: none; display: block; margin-bottom: 8px; transition: color 0.2s; }
+        footer a:hover { color: #fff; }
+        .footer-bottom-note { grid-column: span 3; text-align: center; margin-top: 20px; color: #555; font-size: 12px; }
+
+        @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } footer { grid-template-columns: 1fr; } }
+    </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <header class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="brand-logo">
-                <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI Logo" class="logo-img">
-            </a>
-            <div class="nav-right">
-                <nav class="nav-menu">
-                    <div class="dropdown">
-                        <button class="dropbtn">
-                            Discover
-                            <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                        <div class="dropdown-content">
-                            <a href="index.html">Home</a>
-                            <a href="games.html">Games</a>
-                            <a href="stars.html">Stars</a>
-                            <a href="tools.html">Tools</a>
-                        </div>
-                    </div>
-                    <a href="about.html" class="nav-link">About</a>
-                </nav>
-                <a href="jobs.html" class="btn-hiring">WE'RE HIRING</a>
-            </div>
-        </div>
+    <!-- Header -->
+    <header>
+        <a href="index.html" class="logo-text">POPCRAFT AI</a>
+        <nav>
+            <div class="dropdown">Discover ▾</div>
+            <a href="games.html">Games</a>
+            <a href="tools.html">Tools</a>
+            <a href="stars.html">Stars</a>
+        </nav>
+        <a href="#" class="hiring-btn" target="_blank">WE'RE HIRING</a>
     </header>
 
-    <!-- Hero Section -->
-    <main class="page-container">
-        <section class="hero-section">
-            <h1 class="hero-title font-splash">Transforming the<br>future of music.</h1>
-            <p class="hero-subtitle">Bringing the joy of AI-powered music creation and gaming to everyone.</p>
-        </section>
-
-        <!-- Discovery Tiles Grid -->
-        <section class="tiles-grid">
-            <div class="card-item">
-                <a href="games.html">
-                    <img src="assets/tiles/Popcraft%20Games.png" alt="POPCRAFT Games" class="tile-img">
-                </a>
+    <!-- Main 3x3 Grid Layout using local asset tiles -->
+    <main>
+        <div class="hero-grid">
+            <!-- Row 1 -->
+            <div class="grid-card">
+                <img src="assets/tiles/BrandedTile1.png" alt="Branded Tile 1">
+            </div>
+            <a href="games.html" class="grid-card">
+                <img src="assets/tiles/Popcraft Games.png" alt="Popcraft Games">
+            </a>
+            <div class="grid-card">
+                <img src="assets/tiles/BrandedTile2.png" alt="Branded Tile 2">
             </div>
 
-            <div class="card-item">
-                <a href="stars.html">
-                    <img src="assets/tiles/Popcraft%20Stars.png" alt="POPCRAFT Stars" class="tile-img">
-                </a>
+            <!-- Row 2 -->
+            <a href="tools.html" class="grid-card">
+                <img src="assets/tiles/Popcraft Tools.png" alt="Popcraft Tools">
+            </a>
+            <a href="games.html" class="grid-card">
+                <img src="assets/tiles/play icon.png" alt="Play Showcase">
+            </a>
+            <div class="grid-card">
+                <img src="assets/tiles/BrandedTile3.png" alt="Branded Tile 3">
             </div>
 
-            <div class="card-item">
-                <a href="tools.html">
-                    <img src="assets/tiles/Popcraft%20Tools.png" alt="POPCRAFT Tools" class="tile-img">
-                </a>
+            <!-- Row 3 -->
+            <div class="grid-card">
+                <img src="assets/tiles/BrandedTile4.png" alt="Branded Tile 4">
             </div>
-        </section>
+            <a href="stars.html" class="grid-card">
+                <img src="assets/tiles/Popcraft Stars.png" alt="Popcraft Stars">
+            </a>
+            <!-- Extra filler or matching logo asset for bottom right -->
+            <div class="grid-card">
+                <img src="assets/tiles/BrandedTile1.png" alt="Branded Tile">
+            </div>
+        </div>
     </main>
 
     <!-- Footer -->
-    <footer class="footer-container">
-        <div class="footer-brand">
-            <img src="assets/logo/Popcraft_Logotype.png" alt="POPCRAFT AI Logo" class="footer-logo">
-            <p>© 2026, POPCRAFT AI. All Rights Reserved.</p>
+    <footer>
+        <div>
+            <div style="font-weight: 700; color: #fff; margin-bottom: 12px;">POPCRAFT</div>
+            © 2026 PopCraft. All Rights Reserved.<br><br>
+            If you’re interested in getting in touch, reach out via <a href="mailto:info@showtimecraft.org" style="display:inline; color:#aaa;">info@showtimecraft.org</a>
         </div>
-
-        <div class="footer-links-group">
-            <div class="link-col">
-                <a href="#">Merch</a>
-                <a href="#">Newsroom</a>
-            </div>
-            <div class="link-col">
-                <a href="jobs.html">Careers</a>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Use</a>
-            </div>
+        <div>
+            <a href="#">Merch</a>
+            <a href="#">Newsroom</a>
+        </div>
+        <div>
+            <a href="#">Careers</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+        </div>
+        <div class="footer-bottom-note">
+            Hosted live on Cloudflare Pages via <code>popcraft.showtimecraft.org</code>
         </div>
     </footer>
-
-    <!-- Contact Banner -->
-    <div class="contact-banner">
-        <p class="contact-text">
-            If you're interested in getting in touch, reach out via our discord
-        </p>
-        <p class="address-text">coming soon</p>
-    </div>
 
 </body>
 </html>

@@ -28,8 +28,51 @@
         .logo-text { font-size: 26px; font-weight: 800; letter-spacing: -0.5px; color: #ffffff; text-decoration: none; }
         
         nav { display: flex; gap: 32px; align-items: center; }
-        .dropdown { position: relative; display: inline-block; cursor: pointer; color: #a1a1a1; font-weight: 600; font-size: 15px; }
-        .dropdown:hover { color: #fff; }
+        
+        /* Dropdown Menu Styling & Animation */
+        .dropdown { position: relative; display: inline-block; }
+        .dropbtn { cursor: pointer; color: #a1a1a1; font-weight: 600; font-size: 15px; background: none; border: none; font-family: inherit; display: flex; align-items: center; gap: 4px; transition: color 0.2s; }
+        .dropdown:hover .dropbtn { color: #fff; }
+
+        .dropdown-content {
+            position: absolute;
+            top: 130%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background-color: #ffffff;
+            min-width: 140px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 8px 0;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .dropdown:hover .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-content a {
+            color: #111111;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 0.5px;
+            transition: background-color 0.15s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f0f0f0;
+            color: #000000;
+        }
+
         nav a { color: #a1a1a1; text-decoration: none; font-weight: 600; font-size: 15px; transition: color 0.2s; }
         nav a:hover { color: #ffffff; }
 
@@ -60,7 +103,14 @@
     <header>
         <a href="index.html" class="logo-text">POPCRAFT AI</a>
         <nav>
-            <div class="dropdown">DISCOVER ▾</div>
+            <div class="dropdown">
+                <button class="dropbtn">DISCOVER ▾</button>
+                <div class="dropdown-content">
+                    <a href="games.html">GAMES</a>
+                    <a href="tools.html">TOOLS</a>
+                    <a href="stars.html">STARS</a>
+                </div>
+            </div>
             <a href="about.html">ABOUT</a>
         </nav>
         <a href="jobs.html" class="hiring-btn">WE'RE HIRING</a>

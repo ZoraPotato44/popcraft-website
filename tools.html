@@ -6,6 +6,44 @@
 <title>Popcraft Tools — Splash Tools &amp; Pack Archive</title>
 <meta name="description" content="Popcraft's independent archive of Splash tools, packs, and music-production history.">
 <link rel="stylesheet" href="css/style.css">
+<style>
+.splash-pack-card {
+  margin-top:40px;
+  display:flex;
+  align-items:center;
+  gap:40px;
+}
+.splash-pack-logo {
+  flex:0 0 190px;
+  width:190px;
+  height:190px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.splash-pack-logo img {
+  width:190px;
+  height:190px;
+  object-fit:contain;
+  display:block;
+}
+.splash-pack-copy {
+  flex:1;
+}
+@media (max-width:700px) {
+  .splash-pack-card {
+    flex-direction:column;
+    text-align:center;
+    gap:24px;
+  }
+  .splash-pack-logo {
+    flex:0 0 auto;
+  }
+  .splash-pack-copy {
+    width:100%;
+  }
+}
+</style>
 </head>
 <body>
 <nav class="site-nav">
@@ -56,11 +94,11 @@
       <h2>Explore the archived Splash packs.</h2>
       <p>A separate community archive provides a searchable collection of Splash packs and their associated information. You can search by pack name and sort results by BPM, index, genre, key, bars, and minors.</p>
     </div>
-    <div class="crew-card" style="margin-top:40px;display:flex;align-items:center;gap:32px;">
-      <div style="flex:0 0 150px;display:flex;align-items:center;justify-content:center;">
-        <img src="assets/logo/splash_logo2.png" alt="Splash Pack Search" style="width:150px;height:150px;object-fit:contain;">
+    <div class="crew-card splash-pack-card">
+      <div class="splash-pack-logo">
+        <img src="assets/logo/splash_logo2.png" alt="Splash Pack Search">
       </div>
-      <div class="copy" style="flex:1;">
+      <div class="copy splash-pack-copy">
         <span class="stack-tag">COMMUNITY ARCHIVE · EXTERNAL RESOURCE</span>
         <h3 style="margin-top:12px;">Splash Pack Search</h3>
         <p style="margin-top:12px;">A community-created archive by 50_50_3~)1355 for exploring preserved Splash packs and their associated information. Search by pack name and sort results by BPM, index, genre, key, bars, and minors.</p>

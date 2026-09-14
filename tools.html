@@ -8,39 +8,43 @@
 <meta name="description" content="Popcraft's independent archive of Splash tools, packs, and music-production history.">
 <link rel="stylesheet" href="css/style.css">
 <style>
-.splash-pack-card {
+.splash-pack-card{
   margin-top:40px;
   display:flex;
   align-items:center;
   gap:40px;
 }
-.splash-pack-logo {
-  flex:0 0 190px;
-  width:512px;
-  height:512px;
+.splash-pack-logo{
+  flex:0 0 220px;
+  width:220px;
+  height:220px;
   display:flex;
   align-items:center;
   justify-content:center;
 }
-.splash-pack-logo img {
-  width:512px;
-  height:512px;
+.splash-pack-logo img{
+  width:190px;
+  height:190px;
+  max-width:100%;
+  max-height:100%;
   object-fit:contain;
   display:block;
 }
-.splash-pack-copy {
+.splash-pack-copy{
   flex:1;
 }
-@media (max-width:700px) {
-  .splash-pack-card {
+@media (max-width:700px){
+  .splash-pack-card{
     flex-direction:column;
     text-align:center;
     gap:24px;
   }
-  .splash-pack-logo {
+  .splash-pack-logo{
     flex:0 0 auto;
+    width:220px;
+    height:220px;
   }
-  .splash-pack-copy {
+  .splash-pack-copy{
     width:100%;
   }
 }
